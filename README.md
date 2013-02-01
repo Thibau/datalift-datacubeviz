@@ -1,4 +1,4 @@
-datalift-datacube-viz
+datalift-datacubeviz
 =====================
 
 Datalift module to visualize datacube datasets
