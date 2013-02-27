@@ -34,9 +34,22 @@
 
 package org.datalift.datacubeviz;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import static org.openrdf.query.QueryLanguage.SPARQL;
+
 import org.datalift.fwk.project.Source;
 import org.datalift.fwk.project.SparqlSource;
 import org.datalift.fwk.project.TransformedRdfSource;
+import org.datalift.fwk.rdf.RdfUtils;
+import org.openrdf.model.impl.URIImpl;
+import org.openrdf.query.MalformedQueryException;
+import org.openrdf.query.QueryEvaluationException;
+import org.openrdf.query.TupleQuery;
+import org.openrdf.query.TupleQueryResult;
+import org.openrdf.repository.RepositoryConnection;
+import org.openrdf.repository.RepositoryException;
 
 /**
  * A module to visualize Datacube (RDF) data in the Datalift Platform.
@@ -49,6 +62,11 @@ public class DatacubeVizModel extends ModuleModel {
 	// -------------------------------------------------------------------------
 	// Instance members
 	// -------------------------------------------------------------------------
+
+	private static URIImpl DATACUBE_NS = new URIImpl(
+			"http://purl.org/linked-data/cube#");
+	private static URIImpl DATACUBE_DATASET_NS = new URIImpl(DATACUBE_NS
+			+ "DataSet");
 
 	// -------------------------------------------------------------------------
 	// Constructors
@@ -77,7 +95,33 @@ public class DatacubeVizModel extends ModuleModel {
 	 *         {@link SparqlSource}.
 	 */
 	public boolean isValidSource(Source src) {
-		// TODO detect if src is a valid source to be used by the module
-		return true;
+		// detect if src is a valid source to be used by the module
+		// A valid source is an instance of TransformedRdfSource witch contains
+		// a qb:Dataset
+		try {
+			if (src instanceof TransformedRdfSource) {
+				TransformedRdfSource rdf = (TransformedRdfSource) src;
+				LOG.debug("Source {} is candidate", rdf.getTitle());
+
+				RepositoryConnection cnx = INTERNAL_REPO.newConnection();
+				LOG.debug("Connexion to internal repo OK");
+				TupleQuery q = cnx.prepareTupleQuery(
+						SPARQL,
+						"SELECT DISTINCT ?s WHERE { GRAPH <"
+								+ rdf.getTargetGraph() + "> { ?s a <"
+								+ DATACUBE_DATASET_NS + "> . } }");
+				LOG.debug("Query ready, evaluate... -> {}", q.toString());
+				TupleQueryResult rs = q.evaluate();
+				LOG.debug("OK");
+				if (rs.hasNext())
+					return true;
+			}
+		} catch (RepositoryException | MalformedQueryException
+				| QueryEvaluationException e) {
+			// TODO Auto-generated catch block
+			LOG.fatal("BAD THING APPEND");
+			e.printStackTrace();
+		}
+		return false;
 	}
 }

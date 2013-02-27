@@ -44,6 +44,7 @@ import javax.ws.rs.core.Response.Status;
 
 import org.datalift.fwk.MediaTypes;
 import org.datalift.fwk.project.Project;
+import org.datalift.fwk.project.Source;
 import org.datalift.fwk.view.TemplateModel;
 
 /**
@@ -99,18 +100,27 @@ public class DatacubeVizController extends ModuleController {
 	@Override
 	public UriDesc canHandle(Project p) {
 		UriDesc projectPage = null;
-		try {
-			// TODO The project can be handled if it has at least one datacube
-			// source.
-			projectPage = new UriDesc(
-					this.getName() + "?project=" + p.getUri(), HttpMethod.GET,
-					getTranslatedResource(MODULE_NAME + ".button"));
-			projectPage.setPosition(MODULE_POSITION);
+		// The project can be handled if it has at least one datacube
+		// source.
+		for (Source s : p.getSources()) {
+			if (model.isValidSource(s)) {
+				try {
+					projectPage = new UriDesc(this.getName() + "?project="
+							+ p.getUri(), HttpMethod.GET,
+							getTranslatedResource(MODULE_NAME + ".button"));
+					projectPage.setPosition(MODULE_POSITION);
 
-			LOG.debug("Project {} can use DatacubeViz", p.getTitle());
-		} catch (URISyntaxException e) {
-			LOG.fatal("Failed to check status of project {}: {}", e,
-					p.getUri(), e.getMessage());
+					LOG.debug("Project {} can use DatacubeViz", p.getTitle());
+
+				} catch (URISyntaxException e) {
+					LOG.fatal("Failed to check status of project {}: {}", e,
+							p.getUri(), e.getMessage());
+				}
+			} else {
+				LOG.debug("Project {} can NOT use DatacubeViz", p.getTitle());
+			}
+			if (projectPage != null)
+				break;
 		}
 		return projectPage;
 	}
