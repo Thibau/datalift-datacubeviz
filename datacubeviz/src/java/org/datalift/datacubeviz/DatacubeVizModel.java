@@ -116,8 +116,7 @@ public class DatacubeVizModel extends ModuleModel {
 				if (rs.hasNext())
 					return true;
 			}
-		} catch (RepositoryException | MalformedQueryException
-				| QueryEvaluationException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			LOG.fatal("BAD THING APPEND");
 			e.printStackTrace();
