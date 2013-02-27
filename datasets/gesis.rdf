@@ -10,7 +10,10 @@
   xmlns:dbp="http://dbpedia.org/property/"
   xmlns:sdmx-measure="http://purl.org/linked-data/sdmx/2009/measure#"
   xmlns:sdmx-attribute="http://purl.org/linked-data/sdmx/2009/attribute#"
-  xmlns:dcterms="http://purl.org/dc/terms/">
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://grosfake.fake/">
+
 
   <rdf:Description rdf:about="">
     <foaf:maker rdf:resource="http://www.gesis.org"/>
