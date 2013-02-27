@@ -40,8 +40,8 @@ core
 incubator
 *~
 
-sdmxdatacube/build
-sdmxdatacube/dist
+datacubeviz/build
+datacubeviz/dist
 
 reload_module.sh
 live-build.xml
