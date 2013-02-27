@@ -123,4 +123,29 @@ public class DatacubeVizModel extends ModuleModel {
 		}
 		return false;
 	}
+
+	public TupleQueryResult getDatasets(Source src) {
+		TupleQueryResult rs = null;
+		if (src instanceof TransformedRdfSource) {
+			try {
+				TransformedRdfSource rdf = (TransformedRdfSource) src;
+				RepositoryConnection cnx = INTERNAL_REPO.newConnection();
+				LOG.debug("Connexion to internal repo OK");
+				TupleQuery q;
+				q = cnx.prepareTupleQuery(
+						SPARQL,
+						"SELECT DISTINCT ?s WHERE { GRAPH <"
+								+ rdf.getTargetGraph() + "> { ?s a <"
+								+ DATACUBE_DATASET_NS + "> . } }");
+				LOG.debug("Query ready, evaluate... -> {}", q.toString());
+				rs = q.evaluate();
+				LOG.debug("OK");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				LOG.fatal("BAD THING APPEND");
+				e.printStackTrace();
+			}
+		}
+		return rs;
+	}
 }

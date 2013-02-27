@@ -35,6 +35,9 @@
 package org.datalift.datacubeviz;
 
 import java.net.URISyntaxException;
+import java.util.LinkedList;
+import java.util.List;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -42,10 +45,18 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import org.datalift.datacubeviz.container.Dataset;
 import org.datalift.fwk.MediaTypes;
 import org.datalift.fwk.project.Project;
 import org.datalift.fwk.project.Source;
 import org.datalift.fwk.view.TemplateModel;
+import org.openrdf.model.Value;
+import org.openrdf.query.BindingSet;
+import org.openrdf.query.QueryEvaluationException;
+import org.openrdf.query.TupleQueryResult;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 /**
  * The DatacubeViz module's main class which permit visualization of Datacube
@@ -155,5 +166,40 @@ public class DatacubeVizController extends ModuleController {
 			this.sendError(Status.BAD_REQUEST, error.getLocalizedMessage());
 		}
 		return response;
+	}
+
+	@GET
+	@Path("/ws/datasets")
+	@Produces({ MediaTypes.APPLICATION_JSON_UTF8 })
+	public Response getDataSets(@QueryParam("project") java.net.URI projectId) {
+
+		Project p = this.getProject(projectId);
+		Gson gson = new GsonBuilder().create();
+
+		List<org.datalift.datacubeviz.container.Source> list = new LinkedList<org.datalift.datacubeviz.container.Source>();
+		try {
+
+			for (Source s : p.getSources()) {
+				if (model.isValidSource(s)) {
+					org.datalift.datacubeviz.container.Source src = new org.datalift.datacubeviz.container.Source(
+							s.getUri().toString());
+
+					TupleQueryResult rs = model.getDatasets(s);
+					while (rs.hasNext()) {
+						BindingSet set = rs.next();
+						Value uri = set.getValue("s");
+						src.addDataset(new Dataset(uri.toString()));
+					}
+					list.add(src);
+				}
+
+			}
+		} catch (QueryEvaluationException e) {
+			// TODO Auto-generated catch block
+			LOG.fatal("oups...");
+			e.printStackTrace();
+		}
+
+		return Response.status(200).entity(gson.toJson(list)).build();
 	}
 }
