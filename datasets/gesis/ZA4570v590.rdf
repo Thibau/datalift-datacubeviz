@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:gesis="http://lod.gesis.org/lodpilot/ALLBUS/vocab.rdf#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmls.com/foaf/0.1/" xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:sdmx-measure="http://purl.org/linked-data/sdmx/2009/measure#"
+    xmlns:sdmx-attribute="http://purl.org/linked-data/sdmx/2009/attribute#"
+    xmlns:dcterms="http://purl.org/dc/terms/">
+    <rdf:Description rdf:about="">
+        <foaf:maker rdf:resource="http://www.gesis.org"/>
+        <dcterms:date>2011-04-16</dcterms:date>
+    </rdf:Description>
+    <qb:DataSet rdf:about="#ds">
+<rdfs:label xml:lang="de">FURCHT: STELLUNGSVERLUST, ARBEITNEHMER</rdfs:label>
+<rdfs:label xml:lang="en">AFRAID OF UNEMPLOYMENT, EMPLOYEES</rdfs:label>
+<dcterms:source>ZA4570 ALLBUS/GGSS 1980-2008</dcterms:source>
+        <rdfs:comment>Kumulierte Allgemeine Bevölkerungsumfrage der Sozialwissenschaften (aggregiert) / Cumulated German General Social Survey (aggregated)</rdfs:comment>
+        <rdfs:comment>Source: GESIS (http://www.gesis.org)</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://www.gesis.org/dienstleistungen/daten/umfragedaten/allbus/"/>
+        <rdfs:seeAlso rdf:resource="http://info1.gesis.org/dbksearch13/SDESC2.asp?no=4570&amp;search=4570&amp;search2=&amp;DB=D"/>
+        <qb:structure rdf:resource="./za4570dsd.rdf#dsd"/>
+    </qb:DataSet>
+    <!--   <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1980</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_0"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation> -->
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1980</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_1"/>
+        <sdmx-measure:obsValue>1126</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1980</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_2"/>
+        <sdmx-measure:obsValue>42</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1980</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_3"/>
+        <sdmx-measure:obsValue>46</sdmx-measure:obsValue>
+    </qb:Observation>
+    <!--   <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1980</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_7"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1980</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_8"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1980</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_9"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1991</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_0"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation> -->
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1991</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_1"/>
+        <sdmx-measure:obsValue>989</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1991</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_2"/>
+        <sdmx-measure:obsValue>344</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1991</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_3"/>
+        <sdmx-measure:obsValue>135</sdmx-measure:obsValue>
+    </qb:Observation>
+    <!--    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1991</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_7"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1991</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_8"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1991</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_9"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1992</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_0"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+        </qb:Observation>-->
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1992</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_1"/>
+        <sdmx-measure:obsValue>1265</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1992</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_2"/>
+        <sdmx-measure:obsValue>213</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1992</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_3"/>
+        <sdmx-measure:obsValue>99</sdmx-measure:obsValue>
+    </qb:Observation>
+    <!--   <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1992</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_7"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1992</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_8"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1992</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_9"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1994</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_0"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation> -->
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1994</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_1"/>
+        <sdmx-measure:obsValue>1388</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1994</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_2"/>
+        <sdmx-measure:obsValue>209</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1994</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_3"/>
+        <sdmx-measure:obsValue>111</sdmx-measure:obsValue>
+    </qb:Observation>
+    <!--   <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1994</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_7"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1994</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_8"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1994</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_9"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1996</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_0"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>-->
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1996</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_1"/>
+        <sdmx-measure:obsValue>1337</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1996</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_2"/>
+        <sdmx-measure:obsValue>260</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1996</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_3"/>
+        <sdmx-measure:obsValue>100</sdmx-measure:obsValue>
+    </qb:Observation>
+    <!--    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1996</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_7"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1996</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_8"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1996</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_9"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1998</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_0"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>-->
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1998</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_1"/>
+        <sdmx-measure:obsValue>935</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1998</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_2"/>
+        <sdmx-measure:obsValue>254</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1998</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_3"/>
+        <sdmx-measure:obsValue>113</sdmx-measure:obsValue>
+    </qb:Observation>
+    <!--    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1998</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_7"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1998</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_8"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>1998</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_9"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2000</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_0"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>-->
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2000</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_1"/>
+        <sdmx-measure:obsValue>1357</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2000</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_2"/>
+        <sdmx-measure:obsValue>201</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2000</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_3"/>
+        <sdmx-measure:obsValue>99</sdmx-measure:obsValue>
+    </qb:Observation>
+    <!--    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2000</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_7"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2000</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_8"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2000</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_9"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2004</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_0"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>-->
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2004</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_1"/>
+        <sdmx-measure:obsValue>895</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2004</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_2"/>
+        <sdmx-measure:obsValue>204</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2004</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_3"/>
+        <sdmx-measure:obsValue>84</sdmx-measure:obsValue>
+    </qb:Observation>
+    <!--    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2004</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_7"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2004</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_8"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2004</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_9"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2006</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_0"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>-->
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2006</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_1"/>
+        <sdmx-measure:obsValue>1022</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2006</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_2"/>
+        <sdmx-measure:obsValue>255</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2006</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_3"/>
+        <sdmx-measure:obsValue>84</sdmx-measure:obsValue>
+    </qb:Observation>
+    <!--   <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2006</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_7"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2006</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_8"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2006</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_9"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2008</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_0"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>-->
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2008</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_1"/>
+        <sdmx-measure:obsValue>1144</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2008</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_2"/>
+        <sdmx-measure:obsValue>160</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2008</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_3"/>
+        <sdmx-measure:obsValue>80</sdmx-measure:obsValue>
+    </qb:Observation>
+    <!--    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2008</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_7"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2008</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_8"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>
+    <qb:Observation>
+        <qb:dataset rdf:resource="./ZA4570v590.rdf#ds"/>
+        <dcterms:date>2008</dcterms:date>
+        <gesis:geo rdf:resource="./geo.rdf#00"/>
+        <gesis:variable rdf:resource="./variable.rdf#v590_9"/>
+        <sdmx-measure:obsValue>4131698</sdmx-measure:obsValue>
+    </qb:Observation>-->
+</rdf:RDF>

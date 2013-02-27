@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dbp="http://dbpedia.org/property/"
+    xmlns:ed="http://edgarwrap.ontologycentral.com/vocab/edgar#"
+    xmlns:qb="http://purl.org/linked-data/cube#" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:gesis="http://lod.gesis.org/lodpilot/ALLBUS/vocab.rdf#">
+    <skos:ConceptScheme rdf:about="#list">
+        <rdfs:label xml:lang="en">Federal State</rdfs:label>
+        <rdfs:label xml:lang="de">Bundesland</rdfs:label>
+        <rdfs:comment>v1072</rdfs:comment>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#00">
+                <rdfs:label>DEUTSCHLAND</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE"/>
+                <owl:sameAs rdf:resource="http://dbpedia.org/resource/Germany"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#10">
+                <rdfs:label>SCHLESWIG-HOLSTEIN</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DEF"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#20">
+                <rdfs:label>HAMBURG</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE6"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#30">
+                <rdfs:label>NIEDERSACHSEN</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE9"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#40">
+                <rdfs:label>BREMEN</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE5"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#50">
+                <rdfs:label>NORDRHEIN-WESTFALEN</rdfs:label>
+                <owl:sameAs rdf:resource="http://lod.gesis.org/lodpilot/ITNRW/geo.rdf#05"/>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DEA"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#60">
+                <rdfs:label>HESSEN</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE7"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#70">
+                <rdfs:label>RHEINLAND-PFALZ</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DEB"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#80">
+                <rdfs:label>BADEN-WUERTTEMBERG</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE1"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#90">
+                <rdfs:label>BAYERN</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE2"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#100">
+                <rdfs:label>SAARLAND</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DEC"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#111">
+                <rdfs:label>EHEM. BERLIN-WEST</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE301"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#112">
+                <rdfs:label>EHEM. BERLIN-OST</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE302"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#120">
+                <rdfs:label>BRANDENBURG</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE4"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#130">
+                <rdfs:label>MECKLENBURG-VORPOMMERN</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DE8"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#140">
+                <rdfs:label>SACHSEN</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DED"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#150">
+                <rdfs:label>SACHSEN-ANHALT</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DEE"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#160">
+                <rdfs:label>THUERINGEN</rdfs:label>
+                <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DEG"/>
+            </skos:Concept>
+        </skos:hasTopConcept>
+    </skos:ConceptScheme>
+</rdf:RDF>

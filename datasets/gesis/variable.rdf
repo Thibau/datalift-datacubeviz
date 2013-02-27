@@ -1,0 +1,670 @@
+<?xml version="1.0"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dbp="http://dbpedia.org/property/"
+    xmlns:ed="http://edgarwrap.ontologycentral.com/vocab/edgar#"
+    xmlns:qb="http://purl.org/linked-data/cube#" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:gesis="http://lod.gesis.org/lodpilot/ALLBUS/vocab.rdf#">
+    
+    <skos:ConceptScheme rdf:about="#list">
+        <rdfs:label>Variable</rdfs:label>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v2">
+                <rdfs:label xml:lang="de">ERHEBUNGSJAHR</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v6">
+                <rdfs:label xml:lang="de">DEUTSCHE STAATSANGEHOERIGKEIT?</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v6_1">
+                <rdfs:label xml:lang="de">JA</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v6_2">
+                <rdfs:label xml:lang="de">JA,NEBEN ZWEITER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v6_3">
+                <rdfs:label xml:lang="de">NEIN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v6_9">
+                <rdfs:label xml:lang="de">KEINE ANGABE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v9">
+                <rdfs:label xml:lang="de">WIRTSCHAFTSLAGE IN DER BRD HEUTE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v9_0">
+                <rdfs:label xml:lang="de">TNZ;NICHT ERHOBEN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v9_1">
+                <rdfs:label xml:lang="de">SEHR GUT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v9_2">
+                <rdfs:label xml:lang="de">GUT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v9_3">
+                <rdfs:label xml:lang="de">TEILS TEILS</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v9_4">
+                <rdfs:label xml:lang="de">SCHLECHT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v9_5">
+                <rdfs:label xml:lang="de">SEHR SCHLECHT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v9_8">
+                <rdfs:label xml:lang="de">WEISS NICHT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v9_9">
+                <rdfs:label xml:lang="de">KEINE ANGABE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v12">
+                <rdfs:label xml:lang="de">WIRTSCHAFTSLAGE DER BRD IN 1 JAHR</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v12_0">
+                <rdfs:label xml:lang="de">TNZ;NICHT ERHOBEN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v12_1">
+                <rdfs:label xml:lang="de">WESENTLICH BESSER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v12_2">
+                <rdfs:label xml:lang="de">ETWAS BESSER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v12_3">
+                <rdfs:label xml:lang="de">GLEICHBLEIBEND</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v12_4">
+                <rdfs:label xml:lang="de">ETWAS SCHLECHTER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v12_5">
+                <rdfs:label xml:lang="de">WESENTL.SCHLECHTER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v12_8">
+                <rdfs:label xml:lang="de">WEISS NICHT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v12_9">
+                <rdfs:label xml:lang="de">KEINE ANGABE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v541">
+                <rdfs:label xml:lang="de">GESCHLECHT, BEFRAGTE/R</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v541_1">
+                <rdfs:label xml:lang="de">MANN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v541_2">
+                <rdfs:label xml:lang="de">FRAU</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v542">
+                <rdfs:label xml:lang="de">KONFESSION, BEFRAGTE/R</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v542_1">
+                <rdfs:label xml:lang="de">EVANG.OHNE FREIKIRCH</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v542_2">
+                <rdfs:label xml:lang="de">EVANG.FREIKIRCHE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v542_3">
+                <rdfs:label xml:lang="de">ROEMISCH-KATHOLISCH</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v542_4">
+                <rdfs:label xml:lang="de">AND.CHRISTL.RELIGION</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v542_5">
+                <rdfs:label xml:lang="de">AND.NICHT-CHRISTLICH</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v542_6">
+                <rdfs:label xml:lang="de">KEINER RELIGIONSGEM.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v542_7">
+                <rdfs:label xml:lang="de">VERWEIGERT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v542_9">
+                <rdfs:label xml:lang="de">KEINE ANGABE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568">
+                <rdfs:label xml:lang="de">BEFRAGTE/R BERUFSTAETIG?</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_0">
+                <rdfs:label xml:lang="de">TNZ</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_1">
+                <rdfs:label xml:lang="de">HAUPTBERUFL.GANZTAGS</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_2">
+                <rdfs:label xml:lang="de">HAUPTBERUFL.HALBTAGS</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_3">
+                <rdfs:label xml:lang="de">NEBENHER BERUFSTAE.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_4">
+                <rdfs:label xml:lang="de">NICHT ERWERBSTAETIG</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_5">
+                <rdfs:label xml:lang="de">ARBEITSLOS</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_6">
+                <rdfs:label xml:lang="de">WEHR-,ZIVILDIENSTL.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_7">
+                <rdfs:label xml:lang="de">HAUSFRAU,-MANN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_8">
+                <rdfs:label xml:lang="de">RENTNER,PENSIONAER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_10">
+                <rdfs:label xml:lang="de">SCHUELER,STUDENT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_11">
+                <rdfs:label xml:lang="de">SONST.NICHTBERUFST.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_12">
+                <rdfs:label xml:lang="de">KURZARBEIT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_97">
+                <rdfs:label xml:lang="de">VERWEIGERT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_98">
+                <rdfs:label xml:lang="de">WEISS NICHT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v568_99">
+                <rdfs:label xml:lang="de">KEINE ANGABE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569">
+                <rdfs:label xml:lang="de">BEFR.: STATUS DER NICHTERWERBSTAETIGKEIT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569_0">
+                <rdfs:label xml:lang="de">TNZ;NICHT ERHOBEN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569_1">
+                <rdfs:label xml:lang="de">SCHUELER,STUDENT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569_2">
+                <rdfs:label xml:lang="de">RENTNER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569_3">
+                <rdfs:label xml:lang="de">Z.Z. ARBEITSLOS</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569_4">
+                <rdfs:label xml:lang="de">HAUSFRAU,-MANN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569_5">
+                <rdfs:label xml:lang="de">WEHRPFL.,ZIVI</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569_6">
+                <rdfs:label xml:lang="de">NICHT BERUFSTAETIG</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569_7">
+                <rdfs:label xml:lang="de">VERWEIGERT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569_8">
+                <rdfs:label xml:lang="de">WEISS NICHT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v569_9">
+                <rdfs:label xml:lang="de">KEINE ANGABE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570">
+                <rdfs:label xml:lang="de">BEFR.: JETZIGE BERUFLICHE STELLUNG</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_0">
+                <rdfs:label xml:lang="de">TRIFFT NICHT ZU</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_1">
+                <rdfs:label xml:lang="de">LANDWIRT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_2">
+                <rdfs:label xml:lang="de">AKADEM.FREIER BERUF</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_3">
+                <rdfs:label xml:lang="de">SONST.SELBSTAENDIGE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_4">
+                <rdfs:label xml:lang="de">BEAMT,RICHTER,SOLDAT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_5">
+                <rdfs:label xml:lang="de">ANGESTELLTER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_6">
+                <rdfs:label xml:lang="de">ARBEITER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_7">
+                <rdfs:label xml:lang="de">IN AUSBILDUNG</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_8">
+                <rdfs:label xml:lang="de">MITHELF.FAMILIENANG.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_9">
+                <rdfs:label xml:lang="de">GENOSSENSCHAFTSBAUER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_91">
+                <rdfs:label xml:lang="de">WEHRPFLICHTIGER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_97">
+                <rdfs:label xml:lang="de">VERWEIGERT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_98">
+                <rdfs:label xml:lang="de">WEISS NICHT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v570_99">
+                <rdfs:label xml:lang="de">KEINE ANGABE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571">
+                <rdfs:label xml:lang="de">BEFR.: JETZIGE BERUFL.STELLUNG,KENNZIFF.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_0">
+                <rdfs:label xml:lang="de">TNZ;NICHT ERHOBEN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_10">
+                <rdfs:label xml:lang="de">LANDWIRT,&lt;10 HA</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_11">
+                <rdfs:label xml:lang="de">LANDWIRT,10-19HA</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_12">
+                <rdfs:label xml:lang="de">LANDWIRT,20-49HA</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_13">
+                <rdfs:label xml:lang="de">LANDWIRT,&gt;49 HA</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_15">
+                <rdfs:label xml:lang="de">FREIBER,MAX.1MITARB.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_16">
+                <rdfs:label xml:lang="de">FREIBER.,2-9MITARB.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_17">
+                <rdfs:label xml:lang="de">FREIBER.,&gt;9 MIT.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_21">
+                <rdfs:label xml:lang="de">SELBST.,MAX.1 MIT.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_22">
+                <rdfs:label xml:lang="de">SELBST.,2-9 MIT.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_23">
+                <rdfs:label xml:lang="de">SELBST.,10-49 MIT.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_24">
+                <rdfs:label xml:lang="de">SELBST.,&gt;49 MITARB.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_30">
+                <rdfs:label xml:lang="de">MITHELF.FAMILIENANG.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_40">
+                <rdfs:label xml:lang="de">BEAMTE,EINF.DIENST</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_41">
+                <rdfs:label xml:lang="de">BEAMTE,MITTLERER D.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_42">
+                <rdfs:label xml:lang="de">BEAMTE,GEHOB.DIENST</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_43">
+                <rdfs:label xml:lang="de">BEAMTE,HOEHERER D.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_49">
+                <rdfs:label xml:lang="de">WEHRPFLICHTIGE,ZIVI.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_50">
+                <rdfs:label xml:lang="de">MEISTER I.ANGEST.VER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_51">
+                <rdfs:label xml:lang="de">ANGEST,EINFACH.TAET.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_52">
+                <rdfs:label xml:lang="de">ANGEST,SCHWIERIG.TAE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_53">
+                <rdfs:label xml:lang="de">ANGEST,SELBST.TAETIG</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_54">
+                <rdfs:label xml:lang="de">ANGEST,FUEHRUNGSTAET</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_60">
+                <rdfs:label xml:lang="de">ARBEITER,UNGELERNT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_61">
+                <rdfs:label xml:lang="de">ARBEITER,ANGELERNT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_62">
+                <rdfs:label xml:lang="de">FACHARB.+GELERNTE A.</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_63">
+                <rdfs:label xml:lang="de">VORARB,KOLONNENFUEHR</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_64">
+                <rdfs:label xml:lang="de">MEISTER, POLIERE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_65">
+                <rdfs:label xml:lang="de">GENOSSENSCHAFTSBAUER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_70">
+                <rdfs:label xml:lang="de">KAUFM+VERWALT-AZUBIS</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_71">
+                <rdfs:label xml:lang="de">GEWERBLICHE AZUBIS</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_72">
+                <rdfs:label xml:lang="de">HAUSW.+LANDW.AZUBIS</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_73">
+                <rdfs:label xml:lang="de">BEAMTENANWAERTER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_74">
+                <rdfs:label xml:lang="de">PRAKTIKANT,VOLONTAER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_97">
+                <rdfs:label xml:lang="de">VERWEIGERT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v571_99">
+                <rdfs:label xml:lang="de">KEINE ANGABE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v590">
+                <rdfs:label xml:lang="de">FURCHT: STELLUNGSVERLUST, ARBEITNEHMER</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v590_0">
+                <rdfs:label xml:lang="de">TNZ;NICHT ERHOBEN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v590_1">
+                <rdfs:label xml:lang="de">NEIN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v590_2">
+                <rdfs:label xml:lang="de">JA,ARBEITSLOS WERDEN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v590_3">
+                <rdfs:label xml:lang="de">JA,STELLE WECHSELN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v590_7">
+                <rdfs:label xml:lang="de">VERWEIGERT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v590_8">
+                <rdfs:label xml:lang="de">WEISS NICHT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v590_9">
+                <rdfs:label xml:lang="de">KEINE ANGABE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v591">
+                <rdfs:label xml:lang="de">FURCHT: BETRIEBSVERLUST, SELBSTAENDIGE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v591_0">
+                <rdfs:label xml:lang="de">TNZ;NICHT ERHOBEN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v591_1">
+                <rdfs:label xml:lang="de">NEIN</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v591_2">
+                <rdfs:label xml:lang="de">JA,BERUFL.EXISTENZ</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v591_3">
+                <rdfs:label xml:lang="de">JA,BERUFL.ANDERS</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v591_7">
+                <rdfs:label xml:lang="de">VERWEIGERT</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v591_9">
+                <rdfs:label xml:lang="de">KEINE ANGABE</rdfs:label>
+            </skos:Concept>
+        </skos:hasTopConcept>
+        <skos:hasTopConcept>
+            <skos:Concept rdf:about="#v1072">
+                <rdfs:label xml:lang="de">BUNDESLAND, IN DEM BEFRAGTE/R WOHNT</rdfs:label>
+                <rdfs:comment>see geo.rdf for details</rdfs:comment>
+            </skos:Concept>
+        </skos:hasTopConcept>
+    </skos:ConceptScheme>
+    
+</rdf:RDF>
