@@ -8,6 +8,11 @@ define([
   var ExplorerViewModel = function() {
     var self = this;
 
+    var sources = ko.observableArray();
+
+    var currentDataSet = ko.observable();
+
+
   };
 
   return ExplorerViewModel;
