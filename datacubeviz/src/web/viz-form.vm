@@ -78,16 +78,16 @@
 
           <!-- Nav tabs -->
           <ul class="nav nav-tabs">
-            <li class="active"><a href="#explorer" data-toggle="tab"><i class="icon-filter"></i> #i18n('explorer.tab.label')</a></li>
-            <li><a href="#table" data-toggle="tab"><i class="icon-list-alt"></i> #i18n('table.tab.label')</a></li>
-            <li><a href="#graphs" data-toggle="tab"><i class="icon-picture"></i> #i18n('graphs.tab.label')</a></li>
-            <li><a href="#documentation" data-toggle="tab"><i class="icon-book"></i> #i18n('documentation.tab.label')</a></li>
+            <li data-bind="css: {active: state.isSelected('explorer')}, click: function () {state.selected('explorer');}"><a href="#explorer" data-toggle="tab"><i class="icon-filter"></i> #i18n('explorer.tab.label')</a></li>
+            <li data-bind="css: {active: state.isSelected('table')}, click: function () {state.selected('table');}"><a href="#table" data-toggle="tab"><i class="icon-list-alt"></i> #i18n('table.tab.label')</a></li>
+            <li data-bind="css: {active: state.isSelected('graphs')}, click: function () {state.selected('graphs');}"><a href="#graphs" data-toggle="tab"><i class="icon-picture"></i> #i18n('graphs.tab.label')</a></li>
+            <li data-bind="css: {active: state.isSelected('documentation')}, click: function () {state.selected('documentation');}"><a href="#documentation" data-toggle="tab"><i class="icon-book"></i> #i18n('documentation.tab.label')</a></li>
           </ul>
 
           <div class="tab-content">
 
             <!-- Explorer -->
-            <div class="tab-pane active" id="explorer">
+            <div data-bind="css: {active: state.isSelected('explorer')}" class="tab-pane" id="explorer">
               <div class="row-fluid">
                 <div class="span12">
                   <h3><span class="badge badge-info" data-bind="text: datasets().length > 1 ? datasets().length : '#i18n('one.explorer.text')'"></span> <span data-bind="text: datasets().length > 1 ? '#i18n('some.explorer.text')' : '#i18n('unique.explorer.text')'"></span></h3>
@@ -100,7 +100,7 @@
                     <div class="span4">
                       <div class="row-fluid">
                         <div class="span12">
-                          <h4><a href="#" data-bind="text: dataset.title, attr: {href: dataset.uri}, tooltip: dataset.uri"></a></h4>
+                          <h4><a data-bind="text: dataset.title, attr: {href: dataset.uri}, tooltip: dataset.uri"></a></h4>
                         </div>
                       </div>
                       <div class="row-fluid">
@@ -111,7 +111,7 @@
                         </div>
                         <div class="span9">
                           <p>Lorem ipsum dolor sit amet, id nec conceptam conclusionemque. Et eam tation option. Utinam salutatus ex eum. Ne mea dicit tibique facilisi, ea mei omittam explicari conclusionemque, ad nobis propriae quaerendum sea.</p>
-                          <p><a class="btn" href="#">Read more</a></p>
+                          <p><a class="btn" href="#table" data-toggle="tab" data-bind="click: function () {$root.explore(dataset);}">Explore</a></p>
                         </div>
                       </div>
                       <div class="row-fluid">
@@ -138,17 +138,17 @@
             </div>
 
             <!-- Table -->
-            <div class="tab-pane" id="table">
-
+            <div data-bind="css: {active: state.isSelected('table')}" class="tab-pane" id="table">
+              <p class="lead">Table</p>
             </div>
 
             <!-- Graphs -->
-            <div class="tab-pane" id="graphs">
+            <div data-bind="css: {active: state.isSelected('graphs')}" class="tab-pane" id="graphs">
 
             </div>
 
             <!-- Documentation -->
-            <div class="tab-pane" id="documentation">
+            <div data-bind="css: {active: state.isSelected('documentation')}" class="tab-pane" id="documentation">
               <div class="row-fluid">
                 <!-- SDMX -->
                 <div class="span6">

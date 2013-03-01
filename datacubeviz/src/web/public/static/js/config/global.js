@@ -4,5 +4,11 @@ define({
   datasetsPerRow : 3,
   paths : {
     datasets : '/ws/datasets'
+  },
+  tabs : {
+    explorer      : 'explorer',
+    table         : 'table',
+    graphs        : 'graphs',
+    documentation : 'documentation'
   }
 });

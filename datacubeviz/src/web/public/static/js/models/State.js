@@ -11,6 +11,12 @@ define([
    */
   var State = function () {
     var self = this;
+
+    self.selected = ko.observable(g.tabs.explorer);
+
+    self.isSelected = function (tab) {
+      return self.selected() === tab;
+    };
   };
 
   return State;

@@ -47,6 +47,11 @@ define([
 
     self.initialize();
 
+    self.explore = function (dataset) {
+      self.currentDataset(dataset);
+      self.state.selected(g.tabs.table);
+    };
+
     self.groupedDatasets = ko.computed(function () {
       var rows = [], current = [];
       rows.push(current);
