@@ -29,7 +29,7 @@
     <rdfs:comment>Source: GESIS (http://www.gesis.org)</rdfs:comment>
     <rdfs:seeAlso rdf:resource="http://www.gesis.org/dienstleistungen/daten/umfragedaten/allbus/"/>
     <rdfs:seeAlso rdf:resource="http://info1.gesis.org/dbksearch13/SDESC2.asp?no=4570&amp;search=4570&amp;search2=&amp;DB=D"/>
-    <qb:structure rdf:resource="./za4570dsd.rdf#dsd"/>
+    <qb:structure rdf:resource="#dsd"/>
   </qb:DataSet>
 
   <qb:DataStructureDefinition rdf:about="#dsd">
