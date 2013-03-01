@@ -8,17 +8,18 @@ define([
 ], function ($, ko, g, State, DataCubeSource, DataCubeDataset) {
   'use strict';
 
-  var ExplorerViewModel = function (project) {
+  var ExplorerViewModel = function (project, language) {
     var self = this;
 
     self.project = ko.observable(project);
+    self.language = ko.observable(language);
     self.state = new State();
 
     self.datasets = ko.observableArray([]);
     self.currentDataset = ko.observable();
 
     self.initialize = function () {
-      $.getJSON(g.remoteURL + g.paths.datasets + '?project=' + self.project(),
+      $.getJSON(g.remoteURL + g.paths.datasets + '?project=' + self.project() + '&language=' + self.language(),
         function (data) {
           // Our main working entity is a dataset, we add them to our view model.
           $.each(data, function (i, source) {

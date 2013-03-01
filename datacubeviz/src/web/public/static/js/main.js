@@ -36,5 +36,5 @@ require([
   var parameters = inlineParameters;
 
   // Bind a new instance of our view model to the page.
-  ko.applyBindings(new ExplorerViewModel(parameters.project));
+  ko.applyBindings(new ExplorerViewModel(parameters.project, parameters.language));
 });
