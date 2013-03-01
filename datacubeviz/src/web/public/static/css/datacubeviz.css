@@ -63,6 +63,15 @@ footer .container {
   text-align:center;
 }
 
+/*
+ * Explorer.
+ * ---------------------------------------------------------------------
+ */
+
+h3 .badge {
+  line-height: inherit;
+  font-size: 100%;
+}
 
 /*
  * Documentation.

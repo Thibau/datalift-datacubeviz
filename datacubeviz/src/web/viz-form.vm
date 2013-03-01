@@ -88,6 +88,11 @@
 
             <!-- Explorer -->
             <div class="tab-pane active" id="explorer">
+              <div class="row-fluid">
+                <div class="span12">
+                  <h3><span class="badge badge-info" data-bind="text: datasets().length > 1 ? datasets().length : '#i18n('one.explorer.text')'"></span> <span data-bind="text: datasets().length > 1 ? '#i18n('some.explorer.text')' : '#i18n('unique.explorer.text')'"></span></h3>
+                </div>
+              </div>
             </div>
 
             <!-- Table -->
