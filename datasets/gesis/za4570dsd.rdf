@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rdf:RDF
+    xmlns:gesis="http://lod.gesis.org/lodpilot/ALLBUS/vocab.rdf#"
+    xmlns:sdmx-measure="http://purl.org/linked-data/sdmx/2009/measure#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:ical="http://www.w3.org/2002/12/cal/ical#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    
+    <rdf:Description rdf:about="">
+        <dcterms:publisher>GESIS - Leibniz Institute for the Social Sciences</dcterms:publisher>
+        <rdfs:label xml:lang="de">Allgemeine Bevölkerungsumfrage der Sozialwissenschaften ALLBUS - Kumulation 1980-2008</rdfs:label>
+    </rdf:Description>
+    
+    <qb:DataStructureDefinition rdf:about="#dsd">
+        
+        <qb:component>
+            <rdf:Description>
+                <qb:measure>
+                    <rdfs:Property rdf:about="http://purl.org/dc/terms/date">
+                        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </rdfs:Property>
+                </qb:measure>
+            </rdf:Description>
+        </qb:component>
+        
+        <qb:component>
+            <rdf:Description>
+                <qb:dimension>
+                    <rdfs:Property rdf:about="http://lod.gesis.org/lodpilot/ALLBUS/vocab.rdf#geo">
+                        <qb:codeList rdf:resource="./geo.rdf#list"/>
+                    </rdfs:Property>
+                </qb:dimension>
+            </rdf:Description>
+        </qb:component>
+        
+        <qb:component>
+            <rdf:Description>
+                <qb:dimension>
+                    <rdfs:Property rdf:about="http://lod.gesis.org/lodpilot/ALLBUS/vocab.rdf#variable">
+                        <qb:codeList rdf:resource="./variable.rdf#list"/>
+                    </rdfs:Property>
+                </qb:dimension>
+            </rdf:Description>
+        </qb:component>
+        
+        <qb:component>
+            <rdf:Description>
+                <qb:measure>
+                    <rdfs:Property rdf:about="http://purl.org/linked-data/sdmx/2009/measure#obsValue"/>
+                </qb:measure>
+            </rdf:Description>
+        </qb:component>
+        
+    </qb:DataStructureDefinition>
+</rdf:RDF>

@@ -12,8 +12,8 @@
   xmlns:sdmx-attribute="http://purl.org/linked-data/sdmx/2009/attribute#"
   xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:ical="http://www.w3.org/2002/12/cal/ical#"
   xml:base="http://grosfake.fake/">
-
 
   <rdf:Description rdf:about="">
     <foaf:maker rdf:resource="http://www.gesis.org"/>
@@ -32,8 +32,45 @@
     <qb:structure rdf:resource="./za4570dsd.rdf#dsd"/>
   </qb:DataSet>
 
+  <qb:DataStructureDefinition rdf:about="#dsd">
+    <qb:component>
+      <rdf:Description>
+        <qb:measure>
+          <rdfs:Property rdf:about="http://purl.org/dc/terms/date">
+            <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+          </rdfs:Property>
+        </qb:measure>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension>
+          <rdfs:Property rdf:about="http://lod.gesis.org/lodpilot/ALLBUS/vocab.rdf#geo">
+            <qb:codeList rdf:resource="#geolist"/>
+          </rdfs:Property>
+        </qb:dimension>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension>
+          <rdfs:Property rdf:about="http://lod.gesis.org/lodpilot/ALLBUS/vocab.rdf#variable">
+            <qb:codeList rdf:resource="#variablelist"/>
+          </rdfs:Property>
+        </qb:dimension>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:measure>
+          <rdfs:Property rdf:about="http://purl.org/linked-data/sdmx/2009/measure#obsValue"/>
+        </qb:measure>
+      </rdf:Description>
+    </qb:component>
+  </qb:DataStructureDefinition>
 
-  <skos:ConceptScheme rdf:about="#list">
+
+  <skos:ConceptScheme rdf:about="#geolist">
     <rdfs:label xml:lang="en">Federal State</rdfs:label>
     <rdfs:label xml:lang="de">Bundesland</rdfs:label>
     <rdfs:comment>v1072</rdfs:comment>
@@ -71,7 +108,6 @@
     <skos:hasTopConcept>
       <skos:Concept rdf:about="#50">
         <rdfs:label>NORDRHEIN-WESTFALEN</rdfs:label>
-        <owl:sameAs rdf:resource="http://lod.gesis.org/lodpilot/ITNRW/geo.rdf#05"/>
         <owl:sameAs rdf:resource="http://estatwrap.ontologycentral.com/dic/geo#DEA"/>
       </skos:Concept>
     </skos:hasTopConcept>
@@ -361,7 +397,7 @@
     <sdmx-measure:obsValue>80</sdmx-measure:obsValue>
   </qb:Observation>
 
-  <skos:ConceptScheme rdf:about="#list">
+  <skos:ConceptScheme rdf:about="#variablelist">
     <rdfs:label>Variable</rdfs:label>
     <skos:hasTopConcept>
       <skos:Concept rdf:about="#v2">
