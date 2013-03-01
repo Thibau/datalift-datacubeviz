@@ -8,16 +8,30 @@ define([
 ], function ($, ko, g, State, DataCubeSource, DataCubeDataset) {
   'use strict';
 
+  /**
+   * A view model which manages the exploration of DataCube datasets
+   * contained inside DataCube sources.
+   * @param {String} project  The URI of the current project (to retrieve datasets).
+   * @param {String} language The current user language preference, same purpose.
+   */
   var ExplorerViewModel = function (project, language) {
     var self = this;
 
-    self.project = ko.observable(project);
-    self.language = ko.observable(language);
-    self.state = new State();
+    self.project        = ko.observable(project);
+    self.language       = ko.observable(language);
+    self.state          = new State();
 
-    self.datasets = ko.observableArray([]);
+    self.datasets       = ko.observableArray([]);
     self.currentDataset = ko.observable();
 
+    /*
+    TODO :
+    -
+    */
+
+    /**
+     * Initializes our explorer by retrieving the datasets.
+     */
     self.initialize = function () {
       $.getJSON(g.remoteURL + g.paths.datasets + '?project=' + self.project() + '&language=' + self.language(),
         function (data) {
@@ -26,6 +40,7 @@ define([
             var qbSource = new DataCubeSource(source.title || "SRC Ø", source.uri, self.project());
             $.each(source.datasets, function (j, dataset) {
               self.datasets.push(new DataCubeDataset(dataset.title || "DS Ø", dataset.uri, qbSource));
+              // This is only to test.
               self.datasets.push(new DataCubeDataset(dataset.title || "DS2 Ø", dataset.uri, qbSource));
               self.datasets.push(new DataCubeDataset(dataset.title || "DS3 Ø", dataset.uri, qbSource));
             });
@@ -52,8 +67,13 @@ define([
       self.state.selected(g.tabs.table);
     };
 
+    /**
+     * This computed observable is used to group the datasets into rows.
+     * @return {Array}  An array of rows, each row containing one to {g.datasetsPerRow} datasets.
+     */
     self.groupedDatasets = ko.computed(function () {
-      var rows = [], current = [];
+      var rows = [];
+      var current = [];
       rows.push(current);
       for (var i = 0; i < self.datasets().length; i += 1) {
         current.push(self.datasets()[i]);
