@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="${moduleUri}/static/css/bootstrap.css">
     <link rel="stylesheet" href="${moduleUri}/static/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="${moduleUri}/static/css/datatables-bootstrap.css">
 
     ## Prod/Dev : <link rel="stylesheet" href="${moduleUri}/static/css/datacubeviz.css">
     <link rel="stylesheet" href="http://localhost:1337/static/css/datacubeviz.css">

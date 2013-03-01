@@ -6,22 +6,27 @@ require.config({
     jquery : 'libs/jquery-1.9.1.min',
     bootstrap : 'libs/bootstrap-2.3.0.min',
     knockout : 'libs/knockout-2.2.1.min',
-    validation : 'libs/knockout.validation-1.0.2.min'
+    validation : 'libs/knockout.validation-1.0.2.min',
+    datatables : 'libs/datatables-1.9.4.min'
   },
   shim : {
     // Set dependencies.
-    'bootstrap' : ['jquery']
+    'bootstrap' : ['jquery'],
+    'datatables' : ['jquery'],
+    'extends/datatables-bootstrap' : ['datatables']
   }
 });
 
 require([
   'knockout',
   'config/global',
+  'config/translation',
   'viewmodels/explorer',
   'extends/handlers',
   'extends/native',
-  'bootstrap'
-], function (ko, g, ExplorerViewModel) {
+  'bootstrap',
+  'extends/datatables-bootstrap'
+], function (ko, g, i18n, ExplorerViewModel) {
   /*
     Here it is time for some explanation.
     RequireJS modules define their dependencies explicitly,
@@ -34,6 +39,11 @@ require([
    */
   //'use strict';
   var parameters = inlineParameters;
+
+  // Translate datatables to current language.
+  if (parameters.language === 'fr' || parameters.language === 'it' || parameters.language === 'es') {
+    console.log(i18n.datatables[parameters.language]["sEmptyTable"]);
+  }
 
   // Bind a new instance of our view model to the page.
   ko.applyBindings(new ExplorerViewModel(parameters.project, parameters.language));
