@@ -1,26 +1,35 @@
 define([
   'jquery',
   'knockout',
-  'config/global'
-], function ($, ko, g) {
+  'config/global',
+  'models/State',
+  'models/DataCubeSource',
+  'models/DataCubeDataset'
+], function ($, ko, g, State, DataCubeSource, DataCubeDataset) {
   'use strict';
 
   var ExplorerViewModel = function (project) {
     var self = this;
 
     self.project = ko.observable(project);
+    self.state = new State();
 
-    self.sources = [];
+    self.datasets = ko.observableArray([]);
     self.currentDataset = ko.observable();
 
     self.initialize = function () {
       $.getJSON(g.remoteURL + g.paths.datasets + '?project=' + self.project(),
         function (data) {
-          // self.sources = data.map(function (elt) {
-          //   return new DataCubeDataset();
-          // });
-          // self.currentDataset(self.sources[0]);
-          // console.log(self.currentDataset());
+          // Our main working entity is a dataset.
+          $.each(data, function (i, source) {
+            var qbSource = new DataCubeSource(source.title || "SRC Ø", source.uri, self.project());
+            $.each(source.datasets, function (j, dataset) {
+              self.datasets.push(new DataCubeDataset(dataset.title || "DS Ø", dataset.uri, qbSource));
+            });
+          });
+
+          self.currentDataset(self.datasets()[0]);
+          console.log(self.currentDataset());
         }
       );
     };

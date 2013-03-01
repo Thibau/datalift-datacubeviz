@@ -3,7 +3,7 @@ define([
 ], function (ko) {
   'use strict';
 
-  var DataCubeDataset = function (source, title, uri) {
+  var DataCubeDataset = function (title, uri, source) {
     var self = this;
 
     self.title  = title;
