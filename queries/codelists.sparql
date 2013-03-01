@@ -1,0 +1,30 @@
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?compo ?compoProp ?compoCodes ?concept ?conceptLabelEn ?conceptLabelFr ?conceptLabelOther
+FROM <http://localhost:8080/datalift/project/test2/source/gesis>
+WHERE {
+  <http://grosfake.fake/#ds> qb:structure ?dsd .
+  ?dsd qb:component ?compo .
+  ?compo qb:dimension ?compoProp .
+  ?compoProp a rdfs:Property .
+  ?compoProp qb:codeList ?compoCodes .
+  ?compoCodes skos:hasTopConcept ?concept .
+  OPTIONAL {
+    ?concept rdfs:label ?conceptLabelEn .
+    FILTER langMatches(lang(?conceptLabelEn), "en") .
+  } .
+  OPTIONAL {
+    ?concept rdfs:label ?conceptLabelFr .
+    FILTER langMatches(lang(?conceptLabelFr), "fr") .
+  } .
+  OPTIONAL {
+    ?concept rdfs:label ?conceptLabelOther .
+    FILTER (
+      !langMatches(lang(?conceptLabelOther), "fr") && !langMatches(lang(?conceptLabelOther), "en")
+    )
+  } .
+}

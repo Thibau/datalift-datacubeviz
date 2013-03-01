@@ -1,0 +1,35 @@
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT *
+FROM <http://localhost:8080/datalift/project/test2/source/gesis>
+WHERE {
+  ?ds a qb:DataSet .
+  ?ds qb:structure ?dsd .
+  ?dsd qb:component ?compo .
+  ?compo ?compoNature ?compoProp .
+  ?compoProp a rdfs:Property .
+  OPTIONAL {
+    ?compoProp ?compoPropNature ?propConcept .
+    FILTER (?compoPropNature != rdf:type) .
+    OPTIONAL {
+      ?propConcept rdfs:label ?propConceptLabelEn .
+      FILTER langMatches(lang(?propConceptLabelEn), "en") .
+    } .
+    OPTIONAL {
+      ?propConcept rdfs:label ?propConceptLabelFr .
+      FILTER langMatches(lang(?propConceptLabelFr), "fr") .
+    } .
+    OPTIONAL {
+      ?propConcept rdfs:label ?propConceptLabelOther .
+      FILTER (
+        !langMatches(lang(?propConceptLabelOther), "fr") && !langMatches(lang(?propConceptLabelOther), "en")
+      )
+    } .
+    OPTIONAL {
+      ?propConcept rdfs:comment ?propConceptComment .
+    }
+  } .
+}
+LIMIT 10
