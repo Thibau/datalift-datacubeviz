@@ -2,17 +2,30 @@ define([
   'jquery',
   'knockout',
   'config/global'
-], function($, ko, g){
+], function ($, ko, g) {
   'use strict';
 
-  var ExplorerViewModel = function() {
+  var ExplorerViewModel = function (project) {
     var self = this;
 
-    var sources = ko.observableArray();
+    self.project = ko.observable(project);
 
-    var currentDataSet = ko.observable();
+    self.sources = [];
+    self.currentDataset = ko.observable();
 
+    self.initialize = function () {
+      $.getJSON(g.remoteURL + g.paths.datasets + '?project=' + self.project(),
+        function (data) {
+          // self.sources = data.map(function (elt) {
+          //   return new DataCubeDataset();
+          // });
+          // self.currentDataset(self.sources[0]);
+          // console.log(self.currentDataset());
+        }
+      );
+    };
 
+    self.initialize();
   };
 
   return ExplorerViewModel;

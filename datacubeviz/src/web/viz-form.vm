@@ -175,6 +175,7 @@
     <script type="text/javascript" language="javascript">
       // Inline parameters used to transmit default values to the client.
       var inlineParameters = {
+        project : "$esc.javascript(${it.uri})",
         language : "#i18n('page.lang')"
       };
     </script>

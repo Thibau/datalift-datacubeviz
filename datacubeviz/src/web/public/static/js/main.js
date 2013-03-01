@@ -21,7 +21,7 @@ require([
   'extends/handlers',
   'extends/native',
   'bootstrap'
-], function(ko, g, ExplorerViewModel){
+], function (ko, g, ExplorerViewModel) {
   /*
     Here it is time for some explanation.
     RequireJS modules define their dependencies explicitly,
@@ -36,5 +36,5 @@ require([
   var parameters = inlineParameters;
 
   // Bind a new instance of our view model to the page.
-  ko.applyBindings(new ExplorerViewModel());
+  ko.applyBindings(new ExplorerViewModel(parameters.project));
 });
