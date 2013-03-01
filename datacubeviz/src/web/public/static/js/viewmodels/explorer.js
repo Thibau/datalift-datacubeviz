@@ -40,12 +40,24 @@ define([
           });
 
           self.currentDataset(self.datasets()[0]);
-          console.log(self.currentDataset());
         }
       );
     };
 
     self.initialize();
+
+    self.groupedDatasets = ko.computed(function () {
+      var rows = [], current = [];
+      rows.push(current);
+      for (var i = 0; i < self.datasets().length; i += 1) {
+        current.push(self.datasets()[i]);
+        if (((i + 1) % g.datasetsPerRow) === 0) {
+          current = [];
+          rows.push(current);
+        }
+      }
+      return rows;
+    });
   };
 
   return ExplorerViewModel;
