@@ -27,7 +27,7 @@ define([
     self.currentComponents   = ko.observableArray([]);
     self.currentObservations = ko.observableArray([]);
 
-    self.tableOptions   = new TableOptions(self.language());
+    self.tableOptions   = ko.observable(new TableOptions(self.language()));
     self.tableContent   = ko.observableArray([[0, 1], [0, 1], [0, 1], [0, 1]]);
 
     /*
