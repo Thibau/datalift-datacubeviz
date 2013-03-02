@@ -7,13 +7,15 @@ require.config({
     bootstrap : 'libs/bootstrap-2.3.0.min',
     knockout : 'libs/knockout-2.2.1.min',
     validation : 'libs/knockout.validation-1.0.2.min',
-    datatables : 'libs/datatables-1.9.4.min'
+    datatables : 'libs/datatables-1.9.4.min',
+    colreorder : 'libs/colreorder-1.0.8.min'
   },
   shim : {
     // Set dependencies.
     'bootstrap' : ['jquery'],
     'datatables' : ['jquery'],
-    'extends/datatables-bootstrap' : ['datatables']
+    'extends/datatables-bootstrap' : ['datatables'],
+    'colreorder' : ['datatables', 'jquery']
   }
 });
 

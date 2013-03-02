@@ -182,3 +182,27 @@ div.DTFC_LeftFootWrapper table {
 	border-top: none;
 }
 
+
+/*
+ * Namespace DTCR - "DataTables ColReorder" plug-in
+  * ---------------------------------------------------------------------
+ */
+
+table.DTCR_clonedTable {
+  background-color: white;
+  z-index: 202;
+}
+
+div.DTCR_pointer {
+  width: 1px;
+  background-color: #0259C4;
+  z-index: 201;
+}
+
+div.DTCR_pointer:before {
+  position:relative;
+  top: -16px;
+  left: -6px;
+  color: #0259C4;
+  content: '\25BC';
+}

@@ -1,7 +1,8 @@
 define([
   'jquery',
   'config/global',
-  'config/translation'
+  'config/translation',
+  'colreorder'
 ], function ($, g, i18n) {
   'use strict';
 
@@ -9,9 +10,8 @@ define([
 
 
     var options = {
-      // Save state with localStorage.
-      bStateSave: true,
-      aoColumns: [ { sTitle: 'ColFromBinding1' }, { sTitle: 'ColFromBinding2' } ]
+      sDom: 'Rlfrtip',//'RC<"clear">lfrtip',
+      aoColumns: [ { sTitle: 'Col1' }, { sTitle: 'Col2' }, { sTitle: 'Col3' }, { sTitle: 'Col4' }, { sTitle: 'Col5' }, { sTitle: 'Col6' } ]
     };
 
     // Translate datatables to current language.
