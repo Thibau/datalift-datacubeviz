@@ -2,10 +2,11 @@ define([
   'jquery',
   'knockout',
   'config/global',
+  'models/TableOptions',
   'models/State',
-  'models/DataCubeSource',
-  'models/DataCubeDataset'
-], function ($, ko, g, State, DataCubeSource, DataCubeDataset) {
+  'models/datacube/Source',
+  'models/datacube/Dataset'
+], function ($, ko, g, TableOptions, State, Source, Dataset) {
   'use strict';
 
   /**
@@ -21,8 +22,13 @@ define([
     self.language       = ko.observable(language);
     self.state          = new State();
 
-    self.datasets       = ko.observableArray([]);
-    self.currentDataset = ko.observable();
+    self.datasets            = ko.observableArray([]);
+    self.currentDataset      = ko.observable();
+    self.currentComponents   = ko.observableArray([]);
+    self.currentObservations = ko.observableArray([]);
+
+    self.tableOptions   = new TableOptions(self.language());
+    self.tableContent   = ko.observableArray([[0, 1], [0, 1], [0, 1], [0, 1]]);
 
     /*
     TODO :
@@ -37,21 +43,21 @@ define([
         function (data) {
           // Our main working entity is a dataset, we add them to our view model.
           $.each(data, function (i, source) {
-            var qbSource = new DataCubeSource(source.title || "SRC Ø", source.uri, self.project());
+            var qbSource = new Source(source.title || "SRC Ø", source.uri, self.project());
             $.each(source.datasets, function (j, dataset) {
-              self.datasets.push(new DataCubeDataset(dataset.title || "DS Ø", dataset.uri, qbSource));
+              self.datasets.push(new Dataset(dataset.title || "DS Ø", dataset.uri, qbSource));
               // This is only to test.
-              self.datasets.push(new DataCubeDataset(dataset.title || "DS2 Ø", dataset.uri, qbSource));
-              self.datasets.push(new DataCubeDataset(dataset.title || "DS3 Ø", dataset.uri, qbSource));
+              self.datasets.push(new Dataset(dataset.title || "DS2 Ø", dataset.uri, qbSource));
+              self.datasets.push(new Dataset(dataset.title || "DS3 Ø", dataset.uri, qbSource));
             });
           });
 
           // This is only to test.
           $.each(data, function (i, source) {
-            var qbSource = new DataCubeSource(source.title || "SRC2 Ø", source.uri, self.project());
+            var qbSource = new Source(source.title || "SRC2 Ø", source.uri, self.project());
             $.each(source.datasets, function (j, dataset) {
-              self.datasets.push(new DataCubeDataset(dataset.title || "DS4 Ø", dataset.uri, qbSource));
-              self.datasets.push(new DataCubeDataset(dataset.title || "DS5 Ø", dataset.uri, qbSource));
+              self.datasets.push(new Dataset(dataset.title || "DS4 Ø", dataset.uri, qbSource));
+              self.datasets.push(new Dataset(dataset.title || "DS5 Ø", dataset.uri, qbSource));
             });
           });
 
