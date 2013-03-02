@@ -93,5 +93,19 @@ define({
         "sSortDescending": ": Activar para ordenar la columna de manera descendente"
       }
     }
+  },
+  colvis : {
+    en : {
+      visibility: 'Visibility'
+    },
+    fr : {
+      visibility: 'Visibilit&eacute;'
+    },
+    it : {
+      visibility: 'Visibilit&agrave;'
+    },
+    es : {
+      visibility: 'Visibilidad'
+    },
   }
 });

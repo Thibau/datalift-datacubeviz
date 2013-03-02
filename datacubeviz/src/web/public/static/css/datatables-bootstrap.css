@@ -206,3 +206,21 @@ div.DTCR_pointer:before {
   color: #0259C4;
   content: '\25BC';
 }
+
+
+/*
+ * ColVis styles
+   * ---------------------------------------------------------------------
+ */
+
+.ColVis {
+  float: right;
+  margin-left:1em;
+}
+
+.ColVis_collection {
+  position: relative;
+  background-color: #f3f3f3;
+  z-index: 100;
+}
+
