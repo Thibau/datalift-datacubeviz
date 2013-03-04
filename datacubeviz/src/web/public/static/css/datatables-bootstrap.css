@@ -75,42 +75,6 @@ div.dataTables_scrollFoot table {
 }
 
 
-/*
- * FixedColumns styles
- */
-div.DTFC_LeftHeadWrapper table,
-div.DTFC_LeftFootWrapper table,
-table.DTFC_Cloned tr.even {
-  background-color: white;
-}
-
-div.DTFC_LeftHeadWrapper table {
-  margin-bottom: 0 !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-}
-
-div.DTFC_LeftHeadWrapper table thead tr:last-child th:first-child,
-div.DTFC_LeftHeadWrapper table thead tr:last-child td:first-child {
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-}
-
-div.DTFC_LeftBodyWrapper table {
-  border-top: none;
-  margin-bottom: 0 !important;
-}
-
-div.DTFC_LeftBodyWrapper tbody tr:first-child th,
-div.DTFC_LeftBodyWrapper tbody tr:first-child td {
-  border-top: none;
-}
-
-div.DTFC_LeftFootWrapper table {
-  border-top: none;
-}
-
 
 /*
  * Namespace DTCR - "DataTables ColReorder" plug-in

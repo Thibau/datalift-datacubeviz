@@ -19,11 +19,7 @@ define([
       // Options for the plugins.
       oColVis: {
         activate: "click",
-        buttonText: "&nbsp;" + i18n.colvis[lang].visibility,
-        aiExclude: [0]
-      },
-      oColReorder: {
-        iFixedColumns: 1
+        buttonText: "&nbsp;" + i18n.colvis[lang].visibility
       },
       // Tells that when using this conf, the table is created from scratch.
       bDestroy : true,

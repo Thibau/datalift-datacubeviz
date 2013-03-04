@@ -7,10 +7,8 @@ require.config({
     bootstrap : 'libs/bootstrap-2.3.0.min',
     knockout : 'libs/knockout-2.2.1.min',
     datatables : 'libs/datatables-1.9.4.min',
-    colreorder : 'libs/colreorder-1.0.8.min',
-    //colreorder : 'libs/colreorderresize-1.0.7.min',
+    colreorder : 'libs/colreorderresize-1.0.7.min',
     colvis : 'libs/colvis-1.0.8.min',
-    fixedcol : 'libs/fixedcol-2.5.0.dev.min',
     d3 : 'libs/d3-2.10.2.min',
     nvd3 : 'libs/nvd3-0.0.1a.min'
   },
@@ -20,7 +18,6 @@ require.config({
     datatables : ['jquery'],
     colreorder : ['jquery', 'datatables'],
     colvis : ['jquery', 'bootstrap', 'datatables'],
-    fixedcol : ['jquery', 'bootstrap', 'datatables'],
     // D3 and NVD3 doesn't support AMD, but they expose global variables.
     d3 : {
       exports: 'd3'

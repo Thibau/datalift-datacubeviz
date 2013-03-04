@@ -3,8 +3,7 @@ define([
   'knockout',
   'config/global',
   'bootstrap',
-  'datatables',
-  'fixedcol'
+  'datatables'
 ], function ($, ko, g) {
   'use strict';
 
@@ -103,7 +102,6 @@ define([
           var table = $(element).dataTable(binding.options());
           table.fnClearTable();
           table.fnAddData(binding.data());
-          new FixedColumns(table);
         }
       }
     };
