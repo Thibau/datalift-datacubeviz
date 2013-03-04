@@ -9,6 +9,7 @@ define([
     self.title  = title;
     self.uri    = uri;
     self.source = source;
+
   };
 
   return Dataset;
