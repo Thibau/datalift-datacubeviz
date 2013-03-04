@@ -101,10 +101,13 @@ define([
       update: function (element, valueAccessor) {
         var binding = ko.utils.unwrapObservable(valueAccessor());
 
-        var table = $(element).dataTable(binding.options());
-        table.fnClearTable();
-        table.fnAddData(binding.data());
-        new FixedColumns(table);
+        // We don't need to refresh the table if the displayed tab isn't the right one.
+        if (binding.visible) {
+          var table = $(element).dataTable(binding.options());
+          table.fnClearTable();
+          table.fnAddData(binding.data());
+          new FixedColumns(table);
+        }
       }
     };
 });
