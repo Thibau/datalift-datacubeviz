@@ -1,9 +1,9 @@
 define([
-  'knockout'
-], function (ko) {
+  'config/global'
+], function (g) {
   'use strict';
 
-  var DataCubeDataset = function (title, uri, source) {
+  var Dataset = function (title, uri, source) {
     var self = this;
 
     self.title  = title;
@@ -11,5 +11,5 @@ define([
     self.source = source;
   };
 
-  return DataCubeDataset;
+  return Dataset;
 });

@@ -1,9 +1,9 @@
 define([
-  'knockout'
-], function (ko) {
+  'config/global'
+], function (g) {
   'use strict';
 
-  var DataCubeSource = function (title, uri, project) {
+  var Source = function (title, uri, project) {
     var self = this;
 
     self.title   = title;
@@ -11,5 +11,5 @@ define([
     self.project = project;
   };
 
-  return DataCubeSource;
+  return Source;
 });
