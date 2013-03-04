@@ -4,7 +4,8 @@ define({
   datasetsPerRow : 3,
   paths : {
     datasets : '/ws/datasets',
-    observations : 'http://localhost:1339/observations.json'
+    observations : 'http://localhost:1339/observations.json',
+    endpoint : 'http://localhost:8080/datalift/sparql'
   },
   tabs : {
     explorer      : 'explorer',
