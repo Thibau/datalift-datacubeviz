@@ -3,7 +3,7 @@ define([
 ], function (g) {
   'use strict';
 
-  var Dataset = function (uri, source, title, description, identifier, publisher, creator, contributor) {
+  var Dataset = function (uri, source, title, description, identifier, license, origin, date, created, issued, modified, seeAlso, subjects, publisher, creator, contributor) {
     var self = this;
 
     // All of these properties have unique values.
@@ -14,17 +14,19 @@ define([
     self.description   = description;
     self.identifier    = identifier;
 
-    // self.license       = license;
-    // self.provenance    = provenance;
-    // self.provenanceURL = provenanceURL;
-    // self.seeAlso       = seeAlso;
+    // Those are arrays. origin is equal to dct:source.
+    self.license       = license;
+    self.origin        = origin;
 
-    // self.date          = date;
-    // self.created       = created;
-    // self.issued        = issued;
-    // self.modified      = modified;
+    // The dates are unique too (they are assumed equal between bindings).
+    self.date          = date;
+    self.created       = created;
+    self.issued        = issued;
+    self.modified      = modified;
 
-    // self.subjects      = subjects;
+    // Arrays. Subjects are URIs or Strings.
+    self.seeAlso       = seeAlso;
+    self.subjects      = subjects;
 
     // All three of the datacube.Agent type.
     self.publisher     = publisher;
