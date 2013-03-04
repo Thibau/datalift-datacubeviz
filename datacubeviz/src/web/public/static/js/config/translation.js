@@ -106,6 +106,6 @@ define({
     },
     es : {
       visibility: 'Visibilidad'
-    },
+    }
   }
 });

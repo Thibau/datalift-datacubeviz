@@ -15,7 +15,11 @@ define([
       sDom: 'RC<"clear">lf<"clearfix">rtip',
       oColVis: {
         activate: "click",
-        buttonText: "&nbsp;" + i18n.colvis[lang].visibility
+        buttonText: "&nbsp;" + i18n.colvis[lang].visibility,
+        aiExclude: [0]
+      },
+      oColReorder: {
+        iFixedColumns: 1
       },
       bDestroy : true,
       bPaginate: false,
@@ -23,6 +27,7 @@ define([
       sScrollX: "100%",
       sScrollXInner: "150%",
       bScrollCollapse: true,
+
       aoColumns: [ { sTitle: 'Col1' }, { sTitle: 'Col2' }, { sTitle: 'Col3' }, { sTitle: 'Col4' }, { sTitle: 'Col5' }, { sTitle: 'Col6' } ]
     };
 
