@@ -55,7 +55,7 @@ h1 i, h2 i, h3 i, h4 i {
  */
 
 footer {
-  min-height: 200px;
+  min-height: 100px;
 }
 
 footer .container {
@@ -96,7 +96,11 @@ table tr:hover td {
   background-color: rgba(2, 80, 196, 0.1) !important;
 }
 
-.table tr.even td.sorting_1, .table tr.odd td.sorting_1 {
-  border-left: 1px dashed #0259C4;
-  border-right: 1px dashed #0259C4;
+.table tr.even td.sorting_1 {
+  background-color: #fafaff;
+}
+
+/* The odd lines are the ones grayed by Bootstrap. */
+.table tr.odd td.sorting_1 {
+  background-color: #f6f6ff;
 }

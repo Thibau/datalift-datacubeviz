@@ -7,11 +7,18 @@ define([
 ], function ($, g, i18n) {
   'use strict';
 
+  /**
+   * This class handles the generation of a DataTables configuration object.
+   * DataTables is a bit clumsy, this configuration might be hard to read.
+   * @param {String} lang Current user language.
+   */
   var TableOptions = function (lang) {
 
 
     var options = {
+      // This property is magic. http://www.datatables.net/usage/options#sDom
       sDom: 'RC<"clear">lf<"clearfix">rtip',
+      // Options for the plugins.
       oColVis: {
         activate: "click",
         buttonText: "&nbsp;" + i18n.colvis[lang].visibility,
@@ -20,12 +27,12 @@ define([
       oColReorder: {
         iFixedColumns: 1
       },
+      // Tells that when using this conf, the table is created from scratch.
       bDestroy : true,
-      bProcessing: true,
       bPaginate: true,
       iDisplayLength: 50,
       aLengthMenu: [[10, 50, 250, 1000], [10, 50, 250, 1000]],
-      sScrollY: "300px",
+      sScrollY: "400px",
       sScrollX: "100%",
       sScrollXInner: "150%",
       bScrollCollapse: true,
