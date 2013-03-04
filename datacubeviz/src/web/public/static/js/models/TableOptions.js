@@ -12,11 +12,17 @@ define([
     // colreorder only : sDom: 'Rlfrtip',
 
     var options = {
-      sDom: 'RC<"clear">lfrtip',
-      "oColVis": {
-        "activate": "click",
-        "buttonText": "&nbsp;" + i18n.colvis[lang].visibility
+      sDom: 'RC<"clear">lf<"clearfix">rtip',
+      oColVis: {
+        activate: "click",
+        buttonText: "&nbsp;" + i18n.colvis[lang].visibility
       },
+      bDestroy : true,
+      bPaginate: false,
+      sScrollY: "300px",
+      sScrollX: "100%",
+      sScrollXInner: "150%",
+      bScrollCollapse: true,
       aoColumns: [ { sTitle: 'Col1' }, { sTitle: 'Col2' }, { sTitle: 'Col3' }, { sTitle: 'Col4' }, { sTitle: 'Col5' }, { sTitle: 'Col6' } ]
     };
 

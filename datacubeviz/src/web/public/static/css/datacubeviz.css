@@ -86,3 +86,7 @@ blockquote p {
   padding-top: 10px;
   min-height: 180px;
 }
+
+th.sorting {
+  min-width:50px;
+}

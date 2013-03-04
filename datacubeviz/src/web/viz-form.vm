@@ -143,8 +143,10 @@
 
             <!-- Table -->
             <div data-bind="css: {active: state.isSelected('table')}" class="tab-pane" id="table">
-              <p class="lead">Table</p>
-              <table data-bind="dataTable: {data: tableContent, options: tableOptions}" class="table table-striped table-condensed table-hover table-bordered">
+
+              <!-- <table data-bind="dataTable: {data: tableContent, options: tableOptions}" class="table table-striped table-bordered">
+              </table> -->
+              <table data-bind="dataTable: {data: tableContent, options: tableOptions, visible: state.isSelected('table')}" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered">
               </table>
             </div>
 

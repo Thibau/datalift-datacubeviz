@@ -3,7 +3,9 @@ define([
   'knockout',
   'config/global',
   'bootstrap',
-  'datatables'
+  'datatables',
+  'extends/datatables-bootstrap',
+  'fixedcol'
 ], function ($, ko, g) {
   'use strict';
 
@@ -99,9 +101,9 @@ define([
       update: function (element, valueAccessor) {
         var binding = ko.utils.unwrapObservable(valueAccessor());
 
-        $(element).dataTable(binding.options());
-        $(element).dataTable().fnClearTable();
-        $(element).dataTable().fnAddData(binding.data());
+        var table = $(element).dataTable(binding.options());
+        table.fnAddData(binding.data());
+        new FixedColumns(table);
       }
     };
 });

@@ -1,6 +1,6 @@
 /*
 DataTables Bootstrap theming
-Taken from http://www.datatables.net/blog/Twitter_Bootstrap_2
+Taken from https://raw.github.com/DataTables/Plugins/master/integration/bootstrap/dataTables.bootstrap.js
 Slightly changed to be an AMD (RequireJS) module.
 ---------------------------------------------------------------------
 */
