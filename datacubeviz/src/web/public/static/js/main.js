@@ -6,7 +6,6 @@ require.config({
     jquery : 'libs/jquery-1.9.1.min',
     bootstrap : 'libs/bootstrap-2.3.0.min',
     knockout : 'libs/knockout-2.2.1.min',
-    validation : 'libs/knockout.validation-1.0.2.min',
     datatables : 'libs/datatables-1.9.4.min',
     colreorder : 'libs/colreorder-1.0.8.min',
     //colreorder : 'libs/colreorderresize-1.0.7.min',
@@ -41,7 +40,9 @@ require([
   'extends/handlers',
   'extends/native',
   'bootstrap',
-  'extends/datatables-bootstrap'
+  'extends/datatables-bootstrap',
+  'colreorder',
+  'colvis'
 ], function (ko, g, ExplorerViewModel) {
   /*
     Here it is time for some explanation.

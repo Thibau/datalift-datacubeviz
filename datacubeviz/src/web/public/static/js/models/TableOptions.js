@@ -1,9 +1,7 @@
 define([
   'jquery',
   'config/global',
-  'config/translation',
-  'colreorder',
-  'colvis'
+  'config/translation'
 ], function ($, g, i18n) {
   'use strict';
 

@@ -4,7 +4,6 @@ define([
   'config/global',
   'bootstrap',
   'datatables',
-  'extends/datatables-bootstrap',
   'fixedcol'
 ], function ($, ko, g) {
   'use strict';
@@ -88,11 +87,9 @@ define([
    * Copyright (c) 2011, Josh Buckley (joshbuckley.co.uk).
    * License: MIT (http://www.opensource.org/licenses/mit-license.php)
    *
-   * Example Usage:
-   *     <table data-bind="dataTable: {data: myData, options: { key: val } }">
-   *
    * Modified to work with observable options and to be able to reload options
    * when they change.
+   * And to only reload everything if we are switching to the right tab.
    */
   ko.bindingHandlers.dataTable = {
       init: function (element, valueAccessor) {
