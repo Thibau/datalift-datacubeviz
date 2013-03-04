@@ -43,12 +43,12 @@ define([
         function (data) {
           // Our main working entity is a dataset, we add them to our view model.
           $.each(data, function (i, source) {
-            var qbSource = new Source(source.title || "SRC Ø", source.uri, self.project());
+            var qbSource = new Source(source.uri, self.project(), source.title || "SRC Ø");
             $.each(source.datasets, function (j, dataset) {
-              self.datasets.push(new Dataset(dataset.title || "DS Ø", dataset.uri, qbSource));
+              self.datasets.push(new Dataset(dataset.uri, qbSource, dataset.title || "DS Ø"));
               // This is only to test.
-              self.datasets.push(new Dataset(dataset.title || "DS2 Ø", dataset.uri, qbSource));
-              self.datasets.push(new Dataset(dataset.title || "DS3 Ø", dataset.uri, qbSource));
+              self.datasets.push(new Dataset(dataset.uri, qbSource, dataset.title || "DS2 Ø"));
+              self.datasets.push(new Dataset(dataset.uri, qbSource, dataset.title || "DS3 Ø"));
             });
           });
 

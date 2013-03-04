@@ -3,12 +3,12 @@ define([
 ], function (g) {
   'use strict';
 
-  var Source = function (title, uri, project) {
+  var Source = function (uri, project, title) {
     var self = this;
 
-    self.title   = title;
     self.uri     = uri;
     self.project = project;
+    self.title   = title;
   };
 
   return Source;
