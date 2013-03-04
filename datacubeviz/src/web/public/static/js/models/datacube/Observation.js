@@ -8,6 +8,7 @@ define([
 
     self.identifier = identifier;
     self.components = components;
+
   };
 
   return Observation;

@@ -36,7 +36,7 @@ define([
       sScrollX: "100%",
       sScrollXInner: "150%",
       bScrollCollapse: true,
-      aoColumns: [ { sTitle: 'Col1' }, { sTitle: 'Col2' }, { sTitle: 'Col3' }, { sTitle: 'Col4' }, { sTitle: 'Col5' }, { sTitle: 'Col6' } ]
+      aoColumns: [ { sTitle: 'Col1' }, { sTitle: 'Col2' }, { sTitle: 'Col3' }, { sTitle: 'Col4' }]
     };
 
     // Translate datatables to current language.
