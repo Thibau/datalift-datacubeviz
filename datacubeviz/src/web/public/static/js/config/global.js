@@ -3,7 +3,8 @@ define({
   remoteURL : window.location.href.substring(0, window.location.href.indexOf('?')),
   datasetsPerRow : 3,
   paths : {
-    datasets : '/ws/datasets'
+    datasets : '/ws/datasets',
+    observations : 'http://localhost:1339/observations.json'
   },
   tabs : {
     explorer      : 'explorer',

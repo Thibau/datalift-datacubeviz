@@ -102,6 +102,7 @@ define([
         var binding = ko.utils.unwrapObservable(valueAccessor());
 
         var table = $(element).dataTable(binding.options());
+        table.fnClearTable();
         table.fnAddData(binding.data());
         new FixedColumns(table);
       }
