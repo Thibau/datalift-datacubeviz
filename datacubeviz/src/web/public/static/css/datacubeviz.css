@@ -104,3 +104,12 @@ table tr:hover td {
 .table tr.odd td.sorting_1 {
   background-color: #f6f6ff;
 }
+
+/*
+ * Charts.
+ * ---------------------------------------------------------------------
+ */
+
+#chart svg {
+  height: 400px;
+}
