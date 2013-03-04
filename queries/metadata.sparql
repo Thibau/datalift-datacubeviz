@@ -51,21 +51,6 @@ WHERE {
 
   OPTIONAL {
     {?ds dct:subject ?subject} UNION {?ds dc:subject ?subject} .
-    OPTIONAL {
-      FILTER (isLiteral(?subject))
-      OPTIONAL {
-        {?ds dct:subject ?subjectFR} .
-        FILTER langMatches(lang(?subjectFR), 'FR') .
-      } .
-      OPTIONAL {
-        {?ds dct:subject ?subjectEN} .
-        FILTER langMatches(lang(?subjectEN), 'EN') .
-      } .
-      OPTIONAL {
-        {?ds dct:subject ?subjectOther} .
-        FILTER (!langMatches(lang(?subjectOther), 'EN') &&  !langMatches(lang(?subjectOther), 'FR')) .
-      } .
-    } .
 
     OPTIONAL {
       FILTER (!isLiteral(?subject))
@@ -73,16 +58,7 @@ WHERE {
         ?subject a ?subjectType
         FILTER (?subjectType = skos:Concept || ?subjectType = sdmx:Concept || ?subjectType = sdmx-subject:)
         OPTIONAL {
-          {?ds skos:prefLabel ?subjectLabelFR} .
-          FILTER langMatches(lang(?subjectLabelFR), 'FR') .
-        } .
-        OPTIONAL {
-          {?ds skos:prefLabel ?subjectLabelEN} .
-          FILTER langMatches(lang(?subjectLabelEN), 'EN') .
-        } .
-        OPTIONAL {
-          {?ds skos:prefLabel ?subjectLabelOther} .
-          FILTER (!langMatches(lang(?subjectLabelOther), 'EN') &&  !langMatches(lang(?subjectLabelOther), 'FR')) .
+          {?subject skos:prefLabel ?subjectLabel} .
         } .
       }
     } .
