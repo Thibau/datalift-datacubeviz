@@ -87,6 +87,16 @@ blockquote p {
   min-height: 180px;
 }
 
-th.sorting {
-  min-width:50px;
+/*
+ * Table.
+ * ---------------------------------------------------------------------
+ */
+
+table tr:hover td {
+  background-color: rgba(2, 80, 196, 0.1) !important;
+}
+
+.table tr.even td.sorting_1, .table tr.odd td.sorting_1 {
+  border-left: 1px dashed #0259C4;
+  border-right: 1px dashed #0259C4;
 }

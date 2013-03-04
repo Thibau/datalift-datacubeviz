@@ -9,7 +9,6 @@ define([
 
   var TableOptions = function (lang) {
 
-    // colreorder only : sDom: 'Rlfrtip',
 
     var options = {
       sDom: 'RC<"clear">lf<"clearfix">rtip',
@@ -22,12 +21,14 @@ define([
         iFixedColumns: 1
       },
       bDestroy : true,
-      bPaginate: false,
+      bProcessing: true,
+      bPaginate: true,
+      iDisplayLength: 50,
+      aLengthMenu: [[10, 50, 250, 1000], [10, 50, 250, 1000]],
       sScrollY: "300px",
       sScrollX: "100%",
       sScrollXInner: "150%",
       bScrollCollapse: true,
-
       aoColumns: [ { sTitle: 'Col1' }, { sTitle: 'Col2' }, { sTitle: 'Col3' }, { sTitle: 'Col4' }, { sTitle: 'Col5' }, { sTitle: 'Col6' } ]
     };
 
