@@ -9,6 +9,7 @@ require.config({
     validation : 'libs/knockout.validation-1.0.2.min',
     datatables : 'libs/datatables-1.9.4.min',
     colreorder : 'libs/colreorder-1.0.8.min',
+    //colreorder : 'libs/colreorderresize-1.0.7.min',
     colvis : 'libs/colvis-1.0.8.min',
     fixedcol : 'libs/fixedcol-2.5.0.dev.min'
   },
