@@ -14,6 +14,7 @@ WHERE {
   ?ds a qb:DataSet .
 
   OPTIONAL {{?ds dct:identifier ?id} UNION {?ds dc:identifier ?id}} .
+  OPTIONAL {?ds foaf:depiction ?depiction} .
   OPTIONAL {
     {?ds rdfs:label ?titleFR} UNION {?ds dct:title ?titleFR} UNION {?ds dc:title ?titleFR}.
     FILTER langMatches(lang(?titleFR), 'FR') .

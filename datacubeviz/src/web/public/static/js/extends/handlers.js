@@ -107,6 +107,23 @@ define([
       }
     };
 
+    ko.bindingHandlers.truncate = {
+      init: function (element, valueAccessor) {
+
+      },
+      update: function (element, valueAccessor) {
+        var binding = ko.utils.unwrapObservable(valueAccessor());
+
+        var truncatedText = binding.text;
+        if (binding.text.length > binding.max) {
+          var nextSpace = binding.text.indexOf(' ', binding.max - 5);
+          truncatedText = binding.text.substring(0, Math.min(binding.max + 5, Math.max(nextSpace, binding.max - 5))) + '&hellip;';
+        }
+
+        $(element).html(truncatedText);
+      }
+    };
+
 
     ko.bindingHandlers.nvChart = {
       init: function (element, valueAccessor) {

@@ -73,6 +73,20 @@ h3 .badge {
   font-size: 100%;
 }
 
+.dataset h4 {
+  min-height:40px;
+}
+
+.dataset .description {
+  min-height:100px;
+}
+
+.dataset img {
+  max-width: 80px;
+  max-height: 40px;
+  margin: 4px;
+}
+
 /*
  * Documentation.
  * ---------------------------------------------------------------------

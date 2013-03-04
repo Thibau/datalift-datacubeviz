@@ -3,7 +3,7 @@ define([
 ], function (g) {
   'use strict';
 
-  var Dataset = function (uri, source, title, description, identifier, license, origin, date, created, issued, modified, seeAlso, subjects, publisher, creator, contributor) {
+  var Dataset = function (uri, source, title, description, identifier, depiction, license, origin, date, created, issued, modified, seeAlso, subjects, publisher, creator, contributor) {
     var self = this;
 
     // All of these properties have unique values.
@@ -13,6 +13,7 @@ define([
     self.title         = title;
     self.description   = description;
     self.identifier    = identifier;
+    self.depiction     = depiction;
 
     // Those are arrays. origin is equal to dct:source.
     self.license       = license;

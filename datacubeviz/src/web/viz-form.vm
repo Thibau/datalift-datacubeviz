@@ -102,21 +102,21 @@
                 <div class="span12" data-bind="foreach: { data: groupedDatasets(), as: 'row' }">
                   <div class="row-fluid" data-bind="foreach: {data : row, as: 'dataset'}">
 
-                    <div class="span4">
+                    <div class="span4 dataset">
                       <div class="row-fluid">
                         <div class="span12">
                           <h4><a data-bind="text: dataset.title, attr: {href: dataset.uri}, tooltip: dataset.uri"></a></h4>
                         </div>
                       </div>
                       <div class="row-fluid">
-                        <div class="span3">
-                          <a href="#" class="thumbnail">
-                            <img src="http://placehold.it/260x180" alt="">
-                          </a>
+                        <div class="span12">
+                          <img data-bind="attr: {src: dataset.depiction || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAABU1BMVEX8/fyMjYwEM5yUkoyUlJTExMScnJzs7Oz08/Tc29y0s7Tk4+SkpKSsq6z09PycmpS8u7ykopzU1NQMPJzEwrzc4/S8urTMzMzs7vQsVqyEnMzs8vTk5vQUQpy0sqysqqQEOpzs6uQcS6S8yuTc2tTk6vREbLTU3Oxce7xsisSktdxMcrT8+vS8xuQURKQsWqzM1uwkUqRMbrSsu9zk4tz08uyUmpyUqtS0xOQkTqRUdLzEzuRseowcRpRkhMSMo9R8k8zU0sx8msx0gpTMysRUerycrtQcRpw0XqzE0uykutwMOpT0+vw8ZrSUptR0ksSsrrzs8vyssryEioycstxEYpwsUpyMkpyMlqS0wtwcRqRUapQkUqzU1tx0ksxEZrSkrrycprzc4uzc3uyMosw8YqyEhoxshsRkdpw8WpQsUpR8gpRccqR8ipzExsxkcoxkgryhnqgGAAADa0lEQVR4Xu2VVZPrOBBG1d2SzBRmziAzw2WmZWbm/48r25W5ycZVsbNz3+aUK37ySbfU+sTeFbfcsuberM8BGbR8kTO6mqbr+v/26ZJAEf540jFLojwwrPm0hp9jioHwS44jlZcgfrgUc/lssGOzrmuatWfkysJs2ZIDwSfFOXwBUGGqf72+ZxOcfXSY2WfZQCabZt8kkI9wKevOd23gfsLS6z5AYO1gtZ/Np4W+fTZNgaBtsBXsXGbr1wFe0BJ8Asg2GCse42oxk4+olOQrcLAt9XYv8NFphn7bBE5ifRwCKxJ82sG7bmqfA9BO2o8CAY99bHEBHw/T+kwip5K4fiBzLMatIR6l8+km0OukfstEyjfiqIdLKX1E73UTfDkOYz7WWMVmmkWsmAReuatP+7xxn6KWxw9SCNV3QAdSBo5fKBvW29ZN8CZ8rP8FrqYQfvnxT+9zioIKiDhxz25FJ9AqGWySVextzRYWd84/FGXRcmw7kAc8Sj9KDr+H+fxdNpurzsYKU6xplpG7I3zTdGwj+b+PcaEyW9j/7D/JpLKVJXOBvd3ZQvcFbm6xVPSxc8Vm8xKbL1k6NvDrxdnCYR5PhsmCRqMycYvWML/CZvMAt9cTfesb5/cCNUVCDagVXtGneVxOsS0qjWvP2SRRXYf47AxCCEgGjuObj7GaZhSruFOc1Ilwqp9fYu/bQslpB5xiK3yOnacp9nkZm5M9lziIKLG2T101RQ3LMO6LkmPT2fmzXTabozx+5U7kFkgj2oPjJ+M3dA7g3jcVlub44WZjMveNuPLN8SmxJPCCPlsXp/F1J2vCg/jsvVnChe/GfDal8ynWt/HBdX1e1K+iroTfv/W1gdL62PAEm8ORL8rBUYXFsfrAd1lafsjjw9H68fIozF/gyWhpu8qn6kvNkyouMMUeJ37nuu5NvKjHAk0CmBrLwBJu9ON7SflGwioux0ItIG7usyysNPNX7kCSV2bTQs0Enqm++OMffQk8N541PXzlRj4K+83Iz9j8Bfj9iXlHrIW+FoDqNytbiL9CULa0tXHhoXqZPKwvO9v42+/EuSelY4YBqLNFxEvGdJva8/jYbvWPA290j0L4/BlXuPeXxuZD6xoDIUotFYDSU+a/sfmU3QR63TIGOSFe//Nqkd0keqXO3gW33PIvn/tID0xqigAAAAAASUVORK5CYII='}" class="img-polaroid pull-left">
+                          <p class="description" data-bind="truncate: {text: dataset.description, max: 150}"></p>
                         </div>
-                        <div class="span9">
-                          <p data-bind="text: dataset.description"></p>
-                          <p><a class="btn" href="#table" data-toggle="tab" data-bind="click: function () {$root.explore(dataset);}">#i18n('go.explorer.text')</a></p>
+                      </div>
+                      <div class="row-fluid">
+                        <div class="span12">
+                          <p><a class="btn offset8" href="#table" data-toggle="tab" data-bind="click: function () {$root.explore(dataset);}">#i18n('go.explorer.text')</a></p>
                         </div>
                       </div>
                       <div class="row-fluid">

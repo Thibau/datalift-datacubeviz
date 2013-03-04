@@ -23,25 +23,26 @@ define([
         uri = binding.ds.value;
         current = rawDatasets[uri];
         if (!current) {
-          current = {};
-          current.uri = uri;
-          current.source = {};
-          current.title = self.getValueIf(binding['title' + self.lang]) || binding.titleOther.value;
+          current             = {};
+          current.uri         = uri;
+          current.source      = {};
+          current.title       = self.getValueIf(binding['title' + self.lang]) || binding.titleOther.value;
           current.description = self.getValueIf(binding['description' + self.lang]) || binding.descriptionOther.value;
-          current.identifier = self.getValueIf(binding.identifier);
+          current.identifier  = self.getValueIf(binding.identifier);
+          current.depiction   = self.getValueIf(binding.depiction);
 
-          current.date = self.getValueIf(binding.date);
-          current.created = self.getValueIf(binding.created);
-          current.issued = self.getValueIf(binding.issued);
-          current.modified = self.getValueIf(binding.modified);
+          current.date        = self.getValueIf(binding.date);
+          current.created     = self.getValueIf(binding.created);
+          current.issued      = self.getValueIf(binding.issued);
+          current.modified    = self.getValueIf(binding.modified);
 
-          current.seeAlso = [];
-          current.subjects = [];
-          current.origin = [];
-          current.license = [];
+          current.seeAlso     = [];
+          current.subjects    = [];
+          current.origin      = [];
+          current.license     = [];
 
-          current.publisher = binding.publisher && new Agent(binding.publisher, binding.publisherName, binding.publisherPage);
-          current.creator = binding.creator && new Agent(binding.creator, binding.creatorName, binding.creatorPage);
+          current.publisher   = binding.publisher && new Agent(binding.publisher, binding.publisherName, binding.publisherPage);
+          current.creator     = binding.creator && new Agent(binding.creator, binding.creatorName, binding.creatorPage);
           current.contributor = binding.contributor && new Agent(binding.contributor, binding.contributorName, binding.contributorPage);
         }
 
@@ -65,7 +66,7 @@ define([
       });
 
       var result = $.map(rawDatasets, function (ds, uri) {
-        return new Dataset(ds.uri, ds.source, ds.title, ds.description, ds.identifier, ds.license, ds.origin, ds.date, ds.created, ds.issued, ds.modified, ds.seeAlso, ds.subjects, ds.identifier, ds.publisher, ds.creator, ds.contributor);
+        return new Dataset(ds.uri, ds.source, ds.title, ds.description, ds.identifier, ds.depiction, ds.license, ds.origin, ds.date, ds.created, ds.issued, ds.modified, ds.seeAlso, ds.subjects, ds.identifier, ds.publisher, ds.creator, ds.contributor);
       });
 
       return result;
