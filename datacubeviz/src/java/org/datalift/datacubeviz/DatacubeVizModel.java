@@ -34,22 +34,15 @@
 
 package org.datalift.datacubeviz;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-
 import static org.openrdf.query.QueryLanguage.SPARQL;
 
 import org.datalift.fwk.project.Source;
 import org.datalift.fwk.project.SparqlSource;
 import org.datalift.fwk.project.TransformedRdfSource;
-import org.datalift.fwk.rdf.RdfUtils;
 import org.openrdf.model.impl.URIImpl;
-import org.openrdf.query.MalformedQueryException;
-import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.TupleQuery;
 import org.openrdf.query.TupleQueryResult;
 import org.openrdf.repository.RepositoryConnection;
-import org.openrdf.repository.RepositoryException;
 
 /**
  * A module to visualize Datacube (RDF) data in the Datalift Platform.
