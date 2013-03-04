@@ -11,16 +11,26 @@ require.config({
     colreorder : 'libs/colreorder-1.0.8.min',
     //colreorder : 'libs/colreorderresize-1.0.7.min',
     colvis : 'libs/colvis-1.0.8.min',
-    fixedcol : 'libs/fixedcol-2.5.0.dev.min'
+    fixedcol : 'libs/fixedcol-2.5.0.dev.min',
+    d3 : 'libs/d3-2.10.2.min',
+    nvd3 : 'libs/nvd3-0.0.1a.min'
   },
   shim : {
     // Set dependencies.
-    'bootstrap' : ['jquery'],
-    'datatables' : ['jquery'],
-    'extends/datatables-bootstrap' : ['datatables'],
-    'colreorder' : ['jquery', 'datatables'],
-    'colvis' : ['jquery', 'bootstrap', 'datatables'],
-    'fixedcol' : ['jquery', 'bootstrap', 'datatables']
+    bootstrap : ['jquery'],
+    datatables : ['jquery'],
+    colreorder : ['jquery', 'datatables'],
+    colvis : ['jquery', 'bootstrap', 'datatables'],
+    fixedcol : ['jquery', 'bootstrap', 'datatables'],
+    // D3 and NVD3 doesn't support AMD, but they expose global variables.
+    d3 : {
+      exports: 'd3'
+    },
+    nvd3: {
+      deps: ['d3'],
+      exports: 'nv'
+    },
+    'extends/datatables-bootstrap' : ['datatables']
   }
 });
 
