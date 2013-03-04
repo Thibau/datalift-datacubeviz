@@ -7,11 +7,8 @@ Slightly changed to be an AMD (RequireJS) module.
 
 define([
   'jquery',
-  'knockout',
-  'config/global',
-  'bootstrap',
   'datatables'
-], function($, ko, g){
+], function($) {
   // IDK if this code is strict-proof.
   //'use strict';
 
