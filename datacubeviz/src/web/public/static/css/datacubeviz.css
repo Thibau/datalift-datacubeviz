@@ -87,6 +87,10 @@ h3 .badge {
   margin: 4px;
 }
 
+.dataset time {
+  border-bottom: 1px dotted #999;
+}
+
 /*
  * Documentation.
  * ---------------------------------------------------------------------

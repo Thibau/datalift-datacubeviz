@@ -41,9 +41,9 @@ define([
           current.origin      = [];
           current.license     = [];
 
-          current.publisher   = binding.publisher && new Agent(binding.publisher, binding.publisherName, binding.publisherPage);
-          current.creator     = binding.creator && new Agent(binding.creator, binding.creatorName, binding.creatorPage);
-          current.contributor = binding.contributor && new Agent(binding.contributor, binding.contributorName, binding.contributorPage);
+          current.publisher   = binding.publisher && new Agent(binding.publisher.value, binding.publisherName.value, binding.publisherPage.value);
+          current.creator     = binding.creator && new Agent(binding.creator.value, binding.creatorName.value, binding.creatorPage.value);
+          current.contributor = binding.contributor && new Agent(binding.contributor.value, binding.contributorName.value, binding.contributorPage.value);
         }
 
         if (binding.seeAlso && current.seeAlso.indexOf(binding.seeAlso.value) === -1) {
@@ -66,7 +66,7 @@ define([
       });
 
       var result = $.map(rawDatasets, function (ds, uri) {
-        return new Dataset(ds.uri, ds.source, ds.title, ds.description, ds.identifier, ds.depiction, ds.license, ds.origin, ds.date, ds.created, ds.issued, ds.modified, ds.seeAlso, ds.subjects, ds.identifier, ds.publisher, ds.creator, ds.contributor);
+        return new Dataset(ds.uri, ds.source, ds.title, ds.description, ds.identifier, ds.depiction, ds.license, ds.origin, ds.date, ds.created, ds.issued, ds.modified, ds.seeAlso, ds.subjects, ds.publisher, ds.creator, ds.contributor);
       });
 
       return result;
