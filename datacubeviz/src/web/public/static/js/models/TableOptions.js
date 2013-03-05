@@ -28,9 +28,9 @@ define([
       iDisplayLength: 500,
       aLengthMenu: [[100, 500, 1000], [100, 500, 1000]],
       sScrollY: "400px",
+      // We use horizontal scrolling, but it is necessary by default.
       sScrollX: "100%",
-      sScrollXInner: "150%",
-      bScrollCollapse: true,
+      sScrollXInner: "100%",
       // Columns have to be defined outside.
       aoColumns: columns
     };

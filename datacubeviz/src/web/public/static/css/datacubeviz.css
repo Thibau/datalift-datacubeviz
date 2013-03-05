@@ -91,6 +91,11 @@ h3 .badge {
   border-bottom: 1px dotted #999;
 }
 
+.dataset .metadata {
+  font-size:95%;
+  line-height: 1;
+}
+
 /*
  * Documentation.
  * ---------------------------------------------------------------------
