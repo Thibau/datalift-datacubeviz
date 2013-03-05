@@ -6,11 +6,18 @@ define([
 ], function ($, g, Dataset, Agent) {
   'use strict';
 
+  /**
+   * This class helps generating datacube.Datasets from the data
+   * sent by the server. It basically manages a mapping between
+   * the JSON message and our class.
+   * @param {String} lang The current user language.
+   */
   var DatasetFactory = function (lang) {
     var self = this;
 
     self.lang = lang.toUpperCase();
 
+    // Retrieve value if object exists.
     self.getValueIf = function (obj) {
       return obj && obj.value;
     };
@@ -19,13 +26,17 @@ define([
       var rawDatasets = {};
       var current, uri;
 
+      // A dataset can have (often has) multiple bindings.
       $.each(bindings, function (i, binding) {
         uri = binding.ds.value;
         current = rawDatasets[uri];
+        // Those ones will only be executed once per dataset.
         if (!current) {
           current             = {};
           current.uri         = uri;
+          // We don't have any mean to retrieve sources at the moment.
           current.source      = {};
+          // Retrieve values if they exist (they are optional).
           current.title       = self.getValueIf(binding['title' + self.lang]) || binding.titleOther.value;
           current.description = self.getValueIf(binding['description' + self.lang]) || binding.descriptionOther.value;
           current.identifier  = self.getValueIf(binding.identifier);
@@ -36,6 +47,7 @@ define([
           current.issued      = self.getValueIf(binding.issued);
           current.modified    = self.getValueIf(binding.modified);
 
+          // Those values can appear multiple times (in multiple bindings.)
           current.seeAlso     = [];
           current.subjects    = [];
           current.origin      = [];
@@ -45,6 +57,8 @@ define([
           current.creator     = binding.creator && new Agent(binding.creator.value, binding.creatorName.value, binding.creatorPage.value);
           current.contributor = binding.contributor && new Agent(binding.contributor.value, binding.contributorName.value, binding.contributorPage.value);
         }
+
+        // Those arrays will be filled if they don't already contain the value.
 
         if (binding.seeAlso && current.seeAlso.indexOf(binding.seeAlso.value) === -1) {
           current.seeAlso.push(binding.seeAlso.value);
@@ -65,6 +79,7 @@ define([
         rawDatasets[uri] = current;
       });
 
+      // Now that one object equals one dataset, we can build them with the constructor.
       var result = $.map(rawDatasets, function (ds, uri) {
         return new Dataset(ds.uri, ds.source, ds.title, ds.description, ds.identifier, ds.depiction, ds.license, ds.origin, ds.date, ds.created, ds.issued, ds.modified, ds.seeAlso, ds.subjects, ds.publisher, ds.creator, ds.contributor);
       });

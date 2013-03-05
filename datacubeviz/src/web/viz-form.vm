@@ -102,6 +102,7 @@
                 <div class="span12" data-bind="foreach: { data: groupedDatasets(), as: 'row' }">
                   <div class="row-fluid" data-bind="foreach: {data : row, as: 'dataset'}">
 
+                    <!-- We display metadata for each dataset in order to make the choice easier. -->
                     <div class="span4 dataset">
                       <div class="row-fluid">
                         <div class="span12">
