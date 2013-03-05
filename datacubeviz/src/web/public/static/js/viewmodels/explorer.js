@@ -29,7 +29,7 @@ define([
     self.currentComponents   = ko.observableArray([]);
     self.currentObservations = ko.observableArray([]);
 
-    self.tableOptions   = ko.observable(new TableOptions(self.language()));
+    self.tableOptions   = ko.observable(new TableOptions(self.language(), [ { sTitle: 'Col1' }, { sTitle: 'Col2' }, { sTitle: 'Col3' }, { sTitle: 'Col4' }]));
 
     /*
     TODO :
