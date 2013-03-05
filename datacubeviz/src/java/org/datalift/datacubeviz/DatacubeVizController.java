@@ -182,13 +182,14 @@ public class DatacubeVizController extends ModuleController {
 			for (Source s : p.getSources()) {
 				if (model.isValidSource(s)) {
 					org.datalift.datacubeviz.container.Source src = new org.datalift.datacubeviz.container.Source(
-							s.getUri().toString());
-
+							s.getUri().toString(), s.getTitle());
 					TupleQueryResult rs = model.getDatasets(s);
 					while (rs.hasNext()) {
 						BindingSet set = rs.next();
-						Value uri = set.getValue("s");
-						src.addDataset(new Dataset(uri.toString()));
+						Value uri = set.getValue("uri");
+						Value title = set.getValue("title");
+						src.addDataset(new Dataset(uri.toString(), title
+								.toString()));
 					}
 					list.add(src);
 				}
