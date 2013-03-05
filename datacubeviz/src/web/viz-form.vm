@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="${moduleUri}/static/css/datatables-bootstrap.css">
     <link rel="stylesheet" href="${moduleUri}/static/css/nv.d3.css">
 
-    ## Prod/Dev : <link rel="stylesheet" href="${moduleUri}/static/css/datacubeviz.css">
-    <link rel="stylesheet" href="http://localhost:1337/static/css/datacubeviz.css">
+    <link rel="stylesheet" href="${moduleUri}/static/css/datacubeviz.css">
+    ## Prod/Dev : <link rel="stylesheet" href="http://localhost:1337/static/css/datacubeviz.css">
 
     <!-- fav and touch icons -->
     <link rel="shortcut icon" href="${moduleUri}/static/img/favicon.ico">
@@ -122,7 +122,7 @@
                       </div>
                       <div class="row-fluid">
                         <div class="span12">
-                          <p>
+                          <p class="metadata">
                             <span data-bind="if: dataset.publisher || dataset.creator || dataset.contributor"><i class="icon-user"></i> #i18n('authorship.explorer.text') <span data-bind="if: dataset.publisher"><a data-bind="attr: {href: dataset.publisher.website}, text: dataset.publisher.name, tooltip: '#i18n('publisher.explorer.title')'"></a></span> <span data-bind="if: dataset.creator"><a data-bind="attr: {href: dataset.creator.website}, text: dataset.creator.name, tooltip: '#i18n('creator.explorer.title')'"></a></span> <span data-bind="if: dataset.contributor"><a data-bind="attr: {href: dataset.contributor.website}, text: dataset.contributor.name, tooltip: '#i18n('contributor.explorer.title')'"></a></span> | </span>
                             <span data-bind="if: dataset.created || dataset.issued || dataset.modified"><i class="icon-calendar"></i> #i18n('datation.explorer.text') <span data-bind="if: dataset.created"><time data-bind="text: dataset.created, tooltip: '#i18n('created.explorer.title')'"></time></span> <span data-bind="if: dataset.issued"><time data-bind="text: dataset.issued, tooltip: '#i18n('issued.explorer.title')'"></time></span> <span data-bind="if: dataset.modified"><time data-bind="text: dataset.modified, tooltip: '#i18n('modified.explorer.title')'"></time></span> | </span>
                             <span data-bind="if: dataset.license[0]"><i class="icon-eye-open"></i> #i18n('license.explorer.title') <span class="text-info" data-bind="text: dataset.license[0]"></span> |</span>
@@ -239,8 +239,8 @@
       };
     </script>
 
-    ## Prod/Dev : <script data-main="${moduleUri}/static/js/main" src="${moduleUri}/static/js/libs/require-2.1.4.min.js" type="text/javascript" language="javascript"></script>
-    <script data-main="http://localhost:1337/static/js/main.js" src="http://localhost:1337/static/js/libs/require-2.1.4.min.js" type="text/javascript" language="javascript"></script>
+    <script data-main="${moduleUri}/static/js/main" src="${moduleUri}/static/js/libs/require-2.1.4.min.js" type="text/javascript" language="javascript"></script>
+    ## Prod/Dev : <script data-main="http://localhost:1337/static/js/main.js" src="http://localhost:1337/static/js/libs/require-2.1.4.min.js" type="text/javascript" language="javascript"></script>
 
   </body>
 </html>

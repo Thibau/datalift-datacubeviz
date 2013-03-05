@@ -4,10 +4,12 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT ?obs ?compoProp ?value
-FROM <http://localhost:8080/datalift/project/test2/source/gesis>
 WHERE {
   ?obs a qb:Observation .
-  ?obs qb:dataset <http://grosfake.fake/#ds> .
+  {?obs qb:dataset <http://thib.me/ratp/trafic-2011>}
+    UNION
+  {?obs qb:dataSet <http://thib.me/ratp/trafic-2011>} .
+
   ?obs ?compoProp ?value .
-  FILTER (?compoProp != rdf:type && ?compoProp != qb:dataset)
+  FILTER (?compoProp != rdf:type && ?compoProp != qb:dataset && ?compoProp != qb:dataSet)
 }

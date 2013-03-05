@@ -7,8 +7,9 @@ define([
   'models/datacube/Source',
   'models/datacube/Dataset',
   'models/datacube/Observation',
-  'models/factories/DatasetFactory'
-], function ($, ko, g, TableOptions, State, Source, Dataset, Observation, DatasetFactory) {
+  'models/factories/DatasetFactory',
+  'models/factories/ObservationFactory'
+], function ($, ko, g, TableOptions, State, Source, Dataset, Observation, DatasetFactory, ObservationFactory) {
   'use strict';
 
   /**
@@ -28,8 +29,6 @@ define([
     self.currentDataset      = ko.observable();
     self.currentComponents   = ko.observableArray([]);
     self.currentObservations = ko.observableArray([]);
-
-    self.tableOptions   = ko.observable(new TableOptions(self.language()));
 
     /*
     TODO :
@@ -60,6 +59,7 @@ define([
           var datasetFactory = new DatasetFactory(self.language());
           self.datasets(datasetFactory.buildDatasets(data.results.bindings));
           self.currentDataset(self.datasets()[0]);
+          self.populate();
         }
       );
     };
@@ -68,33 +68,16 @@ define([
 
     self.explore = function (dataset) {
       self.currentDataset(dataset);
-
       self.populate();
-
       self.state.selected(g.tabs.table);
     };
 
     self.populate = function () {
-            //self.tableContent([]);
-
-      $.getJSON(g.paths.observations,
+      var observationQuery = "PREFIX qb: <http://purl.org/linked-data/cube#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX owl: <http://www.w3.org/2002/07/owl#> SELECT ?obs ?compoProp ?value WHERE { ?obs a qb:Observation . {?obs qb:dataset <"+self.currentDataset().uri+">} UNION {?obs qb:dataSet <"+self.currentDataset().uri+">} . ?obs ?compoProp ?value . FILTER (?compoProp != rdf:type && ?compoProp != qb:dataset && ?compoProp != qb:dataSet) }";
+      $.getJSON(g.paths.endpoint + '?default-graph-uri=internal&format=json&query=' + encodeURIComponent(observationQuery),
         function (data) {
-          var observations = {};
-          var bnode;
-
-          $.each(data.results.bindings, function (i, binding) {
-            // obs.value is the Observation bnode, thus unique.
-            bnode = binding.obs.value;
-            observations[bnode] = observations[bnode] || {};
-            observations[bnode][binding.compoProp.value] = binding.value.value;
-          });
-
-
-          self.currentObservations(
-            $.map(observations, function (components, bnode) {
-              return new Observation(bnode, components);
-            })
-          );
+          var observationFactory = new ObservationFactory();
+          self.currentObservations(observationFactory.buildObservations(data.results.bindings));
         }
       );
     };
@@ -115,6 +98,11 @@ define([
         }
       }
       return rows;
+    });
+
+    self.tableOptions = ko.computed(function () {
+      var columns = [ { sTitle: 'Col1' }, { sTitle: 'Col2' }, { sTitle: 'Col3' }, { sTitle: 'Col4' }];
+      return new TableOptions(self.language(), columns);
     });
 
     self.tableContent = ko.computed(function () {

@@ -8,9 +8,10 @@ define([
   /**
    * This class handles the generation of a DataTables configuration object.
    * DataTables is a bit clumsy, this configuration might be hard to read.
-   * @param {String} lang Current user language.
+   * @param {String} lang     Current user language.
+   * @param {Array}  columns  An array of column definitions.
    */
-  var TableOptions = function (lang) {
+  var TableOptions = function (lang, columns) {
 
 
     var options = {
@@ -24,13 +25,14 @@ define([
       // Tells that when using this conf, the table is created from scratch.
       bDestroy : true,
       bPaginate: true,
-      iDisplayLength: 50,
-      aLengthMenu: [[10, 50, 250, 1000], [10, 50, 250, 1000]],
+      iDisplayLength: 500,
+      aLengthMenu: [[100, 500, 1000], [100, 500, 1000]],
       sScrollY: "400px",
+      // We use horizontal scrolling, but it is necessary by default.
       sScrollX: "100%",
-      sScrollXInner: "150%",
-      bScrollCollapse: true,
-      aoColumns: [ { sTitle: 'Col1' }, { sTitle: 'Col2' }, { sTitle: 'Col3' }, { sTitle: 'Col4' }]
+      sScrollXInner: "100%",
+      // Columns have to be defined outside.
+      aoColumns: columns
     };
 
     // Translate datatables to current language.
