@@ -134,9 +134,11 @@ public class DatacubeVizModel extends ModuleModel {
 				TupleQuery q;
 				q = cnx.prepareTupleQuery(
 						SPARQL,
-						"SELECT DISTINCT ?s WHERE { GRAPH <"
-								+ rdf.getTargetGraph() + "> { ?s a <"
-								+ DATACUBE_DATASET_NS + "> . } }");
+						"SELECT DISTINCT ?uri ?title WHERE {   GRAPH <"
+								+ rdf.getTargetGraph()
+								+ ">  {   ?uri a <"
+								+ DATACUBE_DATASET_NS
+								+ "> .    ?uri <http://www.w3.org/2000/01/rdf-schema#label> ?title . }  }");
 				LOG.debug("Query ready, evaluate... -> {}", q.toString());
 				rs = q.evaluate();
 				LOG.debug("OK");
