@@ -42,7 +42,10 @@ import org.datalift.fwk.project.TransformedRdfSource;
 import org.openrdf.model.impl.URIImpl;
 import org.openrdf.query.TupleQuery;
 import org.openrdf.query.TupleQueryResult;
+import org.openrdf.query.resultio.TupleQueryResultFormat;
+import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
+import org.openrdf.repository.http.HTTPRepository;
 
 /**
  * A module to visualize Datacube (RDF) data in the Datalift Platform.
@@ -56,9 +59,9 @@ public class DatacubeVizModel extends ModuleModel {
 	// Instance members
 	// -------------------------------------------------------------------------
 
-	private static URIImpl DATACUBE_NS = new URIImpl(
+	public static URIImpl DATACUBE_NS = new URIImpl(
 			"http://purl.org/linked-data/cube#");
-	private static URIImpl DATACUBE_DATASET_NS = new URIImpl(DATACUBE_NS
+	public static URIImpl DATACUBE_DATASET_NS = new URIImpl(DATACUBE_NS
 			+ "DataSet");
 
 	// -------------------------------------------------------------------------
@@ -122,7 +125,12 @@ public class DatacubeVizModel extends ModuleModel {
 		if (src instanceof TransformedRdfSource) {
 			try {
 				TransformedRdfSource rdf = (TransformedRdfSource) src;
-				RepositoryConnection cnx = INTERNAL_REPO.newConnection();
+				HTTPRepository repo = (HTTPRepository) INTERNAL_REPO
+						.getNativeRepository();
+				repo.setPreferredTupleQueryResultFormat(TupleQueryResultFormat.JSON);
+
+				RepositoryConnection cnx = repo.getConnection();
+
 				LOG.debug("Connexion to internal repo OK");
 				TupleQuery q;
 				q = cnx.prepareTupleQuery(
