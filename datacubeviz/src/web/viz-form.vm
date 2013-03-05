@@ -153,9 +153,12 @@
 
             <!-- Graphs -->
             <div data-bind="css: {active: state.isSelected('graphs')}" class="tab-pane" id="graphs">
-              <p class="lead">Graphs</p>
-              <div id="chart" data-bind="nvChart: state.isSelected('graphs')">
-                <svg></svg>
+              <div>
+                <svg data-bind="nvChart: state.isSelected('graphs')"></svg>
+              </div>
+
+              <div>
+                <svg data-bind="nvPieChart: {data: stubData, visible: state.isSelected('graphs')}"></svg>
               </div>
             </div>
 

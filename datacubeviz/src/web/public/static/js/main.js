@@ -35,6 +35,7 @@ require([
   'config/global',
   'viewmodels/explorer',
   'extends/handlers',
+  'extends/nvd3-handlers',
   'extends/native',
   'bootstrap',
   'extends/datatables-bootstrap',

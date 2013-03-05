@@ -107,5 +107,19 @@ define({
     es : {
       visibility: 'Visibilidad'
     }
+  },
+  nvd3 : {
+    en : {
+      empty: "No data available"
+    },
+    fr : {
+      empty: "Aucune donnée disponible"
+    },
+    it : {
+      empty: "Nessun dato presente"
+    },
+    es : {
+      empty: "Ningún dato disponible"
+    }
   }
 });
