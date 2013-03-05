@@ -107,6 +107,23 @@ define([
       }
     };
 
+    ko.bindingHandlers.truncate = {
+      init: function (element, valueAccessor) {
+
+      },
+      update: function (element, valueAccessor) {
+        var binding = ko.utils.unwrapObservable(valueAccessor());
+
+        var truncatedText = binding.text;
+        if (binding.text.length > binding.max) {
+          var nextSpace = binding.text.indexOf(' ', binding.max - 5);
+          truncatedText = binding.text.substring(0, Math.min(binding.max + 5, Math.max(nextSpace, binding.max - 5))) + '&hellip;';
+        }
+
+        $(element).html(truncatedText);
+      }
+    };
+
 
     ko.bindingHandlers.nvChart = {
       init: function (element, valueAccessor) {
@@ -122,7 +139,7 @@ define([
 
             for (var i = 0; i < 100; i++) {
               sin.push({x: i, y: Math.sin(i/10)});
-              cos.push({x: i, y: .5 * Math.cos(i/10)});
+              cos.push({x: i, y: 0.5 * Math.cos(i/10)});
             }
 
             return [
@@ -161,5 +178,5 @@ define([
           });
         }
       }
-    }
+    };
 });

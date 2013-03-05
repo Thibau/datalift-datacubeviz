@@ -1,6 +1,6 @@
 require.config({
-  // Prod/Dev : baseUrl : 'http://localhost:1337/static/js',
-  baseUrl : 'datacubeviz/static/js',
+  baseUrl : 'http://localhost:1337/static/js',
+  // Prod/Dev : baseUrl : 'datacubeviz/static/js',
   // Require.js allows us to configure shortcut alias
   paths : {
     jquery : 'libs/jquery-1.9.1.min',
