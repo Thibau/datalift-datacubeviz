@@ -1,38 +1,38 @@
 define([
   'jquery',
   'config/global',
-  'models/datacube/Observation'
-], function ($, g, Observation) {
+  'models/datacube/Component'
+], function ($, g, Component) {
   'use strict';
 
   /**
-   * This class helps generating datacube.Observations from the data
+   * This class helps generating datacube.Components from the data
    * sent by the server. It basically manages a mapping between
    * the JSON message and our class.
    */
-  var ObservationFactory = function () {
+  var ComponentFactory = function () {
     var self = this;
 
     self.build = function (bindings) {
-      var observations = {};
+      var components = {};
       var bnode;
 
       $.each(bindings, function (i, binding) {
-        // obs.value is the Observation bnode, thus unique.
+
         bnode = binding.obs.value;
         // Retrieve or create, then make the observation a map of component - value.
-        observations[bnode] = observations[bnode] || {};
-        observations[bnode][binding.compoProp.value] = binding.value.value;
+        components[bnode] = components[bnode] || {};
+        //components[bnode]
       });
 
       // Now that one object equals one observation, we can build them with the constructor.
-      var result = $.map(observations, function (components, bnode) {
-        return new Observation(bnode, components);
+      var result = $.map(components, function (component, bnode) {
+        return new Component();
       });
 
       return result;
     };
   };
 
-  return ObservationFactory;
+  return ComponentFactory;
 });

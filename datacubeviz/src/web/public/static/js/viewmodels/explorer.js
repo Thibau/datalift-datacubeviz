@@ -8,8 +8,9 @@ define([
   'models/datacube/Dataset',
   'models/datacube/Observation',
   'models/factories/DatasetFactory',
-  'models/factories/ObservationFactory'
-], function ($, ko, g, TableOptions, State, Source, Dataset, Observation, DatasetFactory, ObservationFactory) {
+  'models/factories/ObservationFactory',
+  'models/factories/ComponentFactory',
+], function ($, ko, g, TableOptions, State, Source, Dataset, Observation, DatasetFactory, ObservationFactory, ComponentFactory) {
   'use strict';
 
   /**
@@ -59,7 +60,7 @@ define([
       $.getJSON(g.paths.endpoint + '?default-graph-uri=internal&format=json&query=' + encodeURIComponent(metadataQuery),
         function (data) {
           var datasetFactory = new DatasetFactory(self.language());
-          self.datasets(datasetFactory.buildDatasets(data.results.bindings));
+          self.datasets(datasetFactory.build(data.results.bindings));
           self.currentDataset(self.datasets()[0]);
           self.populate();
         }
@@ -75,13 +76,23 @@ define([
     };
 
     self.populate = function () {
-      var observationQuery = "PREFIX qb: <http://purl.org/linked-data/cube#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX owl: <http://www.w3.org/2002/07/owl#> SELECT ?obs ?compoProp ?value WHERE { ?obs a qb:Observation . {?obs qb:dataset <"+self.currentDataset().uri+">} UNION {?obs qb:dataSet <"+self.currentDataset().uri+">} . ?obs ?compoProp ?value . FILTER (?compoProp != rdf:type && ?compoProp != qb:dataset && ?compoProp != qb:dataSet) }";
+      var datasetURI = self.currentDataset().uri;
+
+      var observationQuery = "PREFIX qb: <http://purl.org/linked-data/cube#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX owl: <http://www.w3.org/2002/07/owl#> SELECT ?obs ?compoProp ?value WHERE { ?obs a qb:Observation . {?obs qb:dataset <"+datasetURI+">} UNION {?obs qb:dataSet <"+datasetURI+">} . ?obs ?compoProp ?value . FILTER (?compoProp != rdf:type && ?compoProp != qb:dataset && ?compoProp != qb:dataSet) }";
       $.getJSON(g.paths.endpoint + '?default-graph-uri=internal&format=json&query=' + encodeURIComponent(observationQuery),
         function (data) {
           var observationFactory = new ObservationFactory();
-          self.currentObservations(observationFactory.buildObservations(data.results.bindings));
+          self.currentObservations(observationFactory.build(data.results.bindings));
         }
       );
+
+      // var componentQuery = "PREFIX qb: <http://purl.org/linked-data/cube#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT * WHERE { <"+datasetURI+"> a qb:DataSet . ?ds qb:structure ?dsd . ?dsd qb:componENt ?compo . OPTIONAL { ?compo ?compoNature ?compoProp . FILTER (?compoNature != rdf:type && ?compoNature != rdfs:label && ?compoNature != rdfs:commENt && ?compoNature != qb:order) . OPTIONAL { ?compoProp a rdfs:Property . ?compoProp ?compoPropNature ?propConcept . FILTER (?compoPropNature != rdf:type) . OPTIONAL { ?propConcept rdfs:label ?propConceptLabelEn . FILTER langMatches(lang(?propConceptLabelEn), 'EN') . } . OPTIONAL { ?propConcept rdfs:label ?propConceptLabelFr . FILTER langMatches(lang(?propConceptLabelFr), 'FR') . } . OPTIONAL { ?propConcept rdfs:label ?propConceptLabelOther . FILTER ( !langMatches(lang(?propConceptLabelOther), 'FR') && !langMatches(lang(?propConceptLabelOther), 'EN') ) } . OPTIONAL { ?propConcept rdfs:commENt ?propConceptCommENt . } } . } . OPTIONAL { OPTIONAL { ?compo rdfs:label ?compoLabelEn . FILTER langMatches(lang(?compoLabelEn), 'EN') . } . OPTIONAL { ?compo rdfs:label ?compoLabelFr . FILTER langMatches(lang(?compoLabelFr), 'FR') . } . OPTIONAL { ?compo rdfs:label ?compoLabelOther . FILTER ( !langMatches(lang(?compoLabelOther), 'FR') && !langMatches(lang(?compoLabelOther), 'EN') ) } . } }";
+      // $.getJSON(g.paths.endpoint + '?default-graph-uri=internal&format=json&query=' + encodeURIComponent(componentQuery),
+      //   function (data) {
+      //     var componentFactory = new ComponentFactory();
+      //     self.currentComponents(componentFactory.build(data.results.bindings));
+      //   }
+      // );
     };
 
     /**
@@ -109,14 +120,9 @@ define([
 
     self.tableContent = ko.computed(function () {
       var rows = [];
-      if (self.currentObservations().length > 0) {
-        $.each(self.currentObservations(), function (index, observation) {
-          rows.push($.map(observation.components, function (value, key) { return value; }));
-        });
-      }
-      else {
-        rows = [[0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0], [0, 1, 4, 5], [3, 2, 1, 0]];
-      }
+      $.each(self.currentObservations(), function (index, observation) {
+        rows.push($.map(observation.components, function (value, key) { return value; }));
+      });
       return rows;
     });
 

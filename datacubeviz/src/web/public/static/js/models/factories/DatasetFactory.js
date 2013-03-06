@@ -22,7 +22,7 @@ define([
       return obj && obj.value;
     };
 
-    self.buildDatasets = function (bindings) {
+    self.build = function (bindings) {
       var rawDatasets = {};
       var current, uri;
 
