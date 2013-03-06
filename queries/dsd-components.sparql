@@ -8,28 +8,46 @@ WHERE {
   ?ds a qb:DataSet .
   ?ds qb:structure ?dsd .
   ?dsd qb:component ?compo .
-  ?compo ?compoNature ?compoProp .
-  ?compoProp a rdfs:Property .
   OPTIONAL {
-    ?compoProp ?compoPropNature ?propConcept .
-    FILTER (?compoPropNature != rdf:type) .
+    ?compo ?compoNature ?compoProp .
+    FILTER (?compoNature != rdf:type && ?compoNature != rdfs:label && ?compoNature != rdfs:comment && ?compoNature != qb:order) .
     OPTIONAL {
-      ?propConcept rdfs:label ?propConceptLabelEn .
-      FILTER langMatches(lang(?propConceptLabelEn), "en") .
+      ?compoProp a rdfs:Property .
+      ?compoProp ?compoPropNature ?propConcept .
+      FILTER (?compoPropNature != rdf:type) .
+      OPTIONAL {
+        ?propConcept rdfs:label ?propConceptLabelEn .
+        FILTER langMatches(lang(?propConceptLabelEn), "en") .
+      } .
+      OPTIONAL {
+        ?propConcept rdfs:label ?propConceptLabelFr .
+        FILTER langMatches(lang(?propConceptLabelFr), "fr") .
+      } .
+      OPTIONAL {
+        ?propConcept rdfs:label ?propConceptLabelOther .
+        FILTER (
+          !langMatches(lang(?propConceptLabelOther), "fr") && !langMatches(lang(?propConceptLabelOther), "en")
+        )
+      } .
+      OPTIONAL {
+        ?propConcept rdfs:comment ?propConceptComment .
+      }
+    } .
+  } .
+  OPTIONAL {
+    OPTIONAL {
+      ?compo rdfs:label ?compoLabelEn .
+      FILTER langMatches(lang(?compoLabelEn), "en") .
     } .
     OPTIONAL {
-      ?propConcept rdfs:label ?propConceptLabelFr .
-      FILTER langMatches(lang(?propConceptLabelFr), "fr") .
+      ?compo rdfs:label ?compoLabelFr .
+      FILTER langMatches(lang(?compoLabelFr), "fr") .
     } .
     OPTIONAL {
-      ?propConcept rdfs:label ?propConceptLabelOther .
+      ?compo rdfs:label ?compoLabelOther .
       FILTER (
-        !langMatches(lang(?propConceptLabelOther), "fr") && !langMatches(lang(?propConceptLabelOther), "en")
+        !langMatches(lang(?compoLabelOther), "fr") && !langMatches(lang(?compoLabelOther), "en")
       )
     } .
-    OPTIONAL {
-      ?propConcept rdfs:comment ?propConceptComment .
-    }
-  } .
+  }
 }
-LIMIT 10
