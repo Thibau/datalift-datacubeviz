@@ -4,7 +4,7 @@ define({
   datasetsPerRow : 3,
   paths : {
     datasets : '/ws/datasets',
-    endpoint : 'http://localhost:8080/datalift/sparql'
+    endpoint : window.location.href.substring(0, window.location.href.indexOf('?')).replace('sdmxdatacube', 'sparql')
   },
   tabs : {
     explorer      : 'explorer',
