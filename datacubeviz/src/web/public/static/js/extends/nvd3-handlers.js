@@ -4,7 +4,7 @@ define([
   'config/global',
   'd3',
   'nvd3'
-], function ($, ko, g, d3, nvd3) {
+], function ($, ko, g, d3, nv) {
   'use strict';
 
     ko.bindingHandlers.nvChart = {
@@ -51,7 +51,7 @@ define([
 
             d3.select(element)
                 .datum(data())
-              .transition().duration(1000)
+              .transition().duration(500)
                 .call(chart);
 
             nv.utils.windowResize(chart.update);
@@ -63,7 +63,7 @@ define([
     };
 
 
-    ko.bindingHandlers.nvPieChart = {
+    ko.bindingHandlers.pieChart = {
       init: function (element, valueAccessor) {},
       update: function (element, valueAccessor) {
         var binding = ko.utils.unwrapObservable(valueAccessor());
@@ -95,7 +95,7 @@ define([
 
             d3.select(element)
               .datum(binding.data)
-              .transition().duration(1000)
+              .transition().duration(500)
               .call(chart);
 
               return chart;
@@ -106,4 +106,104 @@ define([
       }
     };
 
+    // A doughnut chart is a pie chart without its center (Bagel chart).
+    ko.bindingHandlers.donutChart = {
+      init: function (element, valueAccessor) {},
+      update: function (element, valueAccessor) {
+        var binding = ko.utils.unwrapObservable(valueAccessor());
+
+        if (binding.visible) {
+          nv.addGraph(function() {
+            var chart = nv.models.pieChart()
+              .x(function(d) { return d.label; })
+              .y(function(d) { return d.value; })
+              .showLabels(true)
+              .noData("Ø")
+              .labelThreshold(0.05)
+              .donut(true);
+
+            d3.select(element)
+              .datum(binding.data)
+              .transition().duration(500)
+              .call(chart);
+
+              return chart;
+          });
+        }
+      }
+    };
+
+    // A bullet chart is useful when displaying only one value with context.
+    ko.bindingHandlers.bulletChart = {
+      init: function (element, valueAccessor) {},
+      update: function (element, valueAccessor) {
+        var binding = ko.utils.unwrapObservable(valueAccessor());
+
+        // {
+        //   "title": "Revenue",
+        //   "subtitle": "US$, in thousands",
+        //   "ranges": [150,225,300],
+        //   "measures": [220],
+        //   "markers": [250]
+        // }
+
+        if (binding.visible) {
+          nv.addGraph(function() {
+            var chart = nv.models.bulletChart();
+
+            d3.select(element)
+              .datum(binding.data)
+              .transition().duration(500)
+              .call(chart);
+
+            return chart;
+          });
+        }
+      }
+    };
+
+    // A bar chart is good when comparing data.
+    ko.bindingHandlers.barChart = {
+      init: function (element, valueAccessor) {},
+      update: function (element, valueAccessor) {
+        var binding = ko.utils.unwrapObservable(valueAccessor());
+
+        // [
+        //   {
+        //     key: "Cumulative Return",
+        //     values: [
+        //       {"label" : "A" , "value" : -29.765957771107} ,
+        //       {"label" : "B" , "value" : 0} ,
+        //       {"label" : "C" , "value" : 32.807804682612} ,
+        //       {"label" : "D" , "value" : 196.45946739256} ,
+        //       {"label" : "E" , "value" : 0.19434030906893} ,
+        //       {"label" : "F" , "value" : -98.079782601442} ,
+        //       {"label" : "G" , "value" : -13.925743130903} ,
+        //       {"label" : "H" , "value" : -5.1387322875705}
+        //     ]
+        //   }
+        // ]
+
+        if (binding.visible) {
+          nv.addGraph(function() {
+            var chart = nv.models.discreteBarChart()
+                .x(function(d) { return d.label;})
+                .y(function(d) { return d.value;})
+                .staggerLabels(false)
+                .tooltips(true)
+                .showValues(true);
+
+            d3.select(element)
+              .datum(binding.data)
+              .transition().duration(500)
+              .call(chart);
+
+            nv.utils.windowResize(chart.update);
+
+            return chart;
+          });
+
+        }
+      }
+    };
 });

@@ -158,7 +158,7 @@
               </div>
 
               <div>
-                <svg data-bind="nvPieChart: {data: stubData, visible: state.isSelected('graphs')}"></svg>
+                <svg data-bind="pieChart: {data: stubData, visible: state.isSelected('graphs')}"></svg>
               </div>
             </div>
 
