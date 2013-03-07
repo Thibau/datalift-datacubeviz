@@ -86,13 +86,13 @@ define([
         }
       );
 
-      // var componentQuery = "PREFIX qb: <http://purl.org/linked-data/cube#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT * WHERE { <"+datasetURI+"> a qb:DataSet . ?ds qb:structure ?dsd . ?dsd qb:componENt ?compo . OPTIONAL { ?compo ?compoNature ?compoProp . FILTER (?compoNature != rdf:type && ?compoNature != rdfs:label && ?compoNature != rdfs:commENt && ?compoNature != qb:order) . OPTIONAL { ?compoProp a rdfs:Property . ?compoProp ?compoPropNature ?propConcept . FILTER (?compoPropNature != rdf:type) . OPTIONAL { ?propConcept rdfs:label ?propConceptLabelEn . FILTER langMatches(lang(?propConceptLabelEn), 'EN') . } . OPTIONAL { ?propConcept rdfs:label ?propConceptLabelFr . FILTER langMatches(lang(?propConceptLabelFr), 'FR') . } . OPTIONAL { ?propConcept rdfs:label ?propConceptLabelOther . FILTER ( !langMatches(lang(?propConceptLabelOther), 'FR') && !langMatches(lang(?propConceptLabelOther), 'EN') ) } . OPTIONAL { ?propConcept rdfs:commENt ?propConceptCommENt . } } . } . OPTIONAL { OPTIONAL { ?compo rdfs:label ?compoLabelEn . FILTER langMatches(lang(?compoLabelEn), 'EN') . } . OPTIONAL { ?compo rdfs:label ?compoLabelFr . FILTER langMatches(lang(?compoLabelFr), 'FR') . } . OPTIONAL { ?compo rdfs:label ?compoLabelOther . FILTER ( !langMatches(lang(?compoLabelOther), 'FR') && !langMatches(lang(?compoLabelOther), 'EN') ) } . } }";
-      // $.getJSON(g.paths.endpoint + '?default-graph-uri=internal&format=json&query=' + encodeURIComponent(componentQuery),
-      //   function (data) {
-      //     var componentFactory = new ComponentFactory();
-      //     self.currentComponents(componentFactory.build(data.results.bindings));
-      //   }
-      // );
+      var componentQuery = "PREFIX qb: <http://purl.org/linked-data/cube#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT * WHERE { <"+datasetURI+"> a qb:DataSet . ?ds qb:structure ?dsd . ?dsd qb:componENt ?compo . OPTIONAL { ?compo ?compoNature ?compoProp . FILTER (?compoNature != rdf:type && ?compoNature != rdfs:label && ?compoNature != rdfs:commENt && ?compoNature != qb:order) . OPTIONAL { ?compoProp a rdfs:Property . ?compoProp ?compoPropNature ?propConcept . FILTER (?compoPropNature != rdf:type) . OPTIONAL { ?propConcept rdfs:label ?propConceptLabelEn . FILTER langMatches(lang(?propConceptLabelEn), 'EN') . } . OPTIONAL { ?propConcept rdfs:label ?propConceptLabelFr . FILTER langMatches(lang(?propConceptLabelFr), 'FR') . } . OPTIONAL { ?propConcept rdfs:label ?propConceptLabelOther . FILTER ( !langMatches(lang(?propConceptLabelOther), 'FR') && !langMatches(lang(?propConceptLabelOther), 'EN') ) } . OPTIONAL { ?propConcept rdfs:commENt ?propConceptCommENt . } } . } . OPTIONAL { OPTIONAL { ?compo rdfs:label ?compoLabelEn . FILTER langMatches(lang(?compoLabelEn), 'EN') . } . OPTIONAL { ?compo rdfs:label ?compoLabelFr . FILTER langMatches(lang(?compoLabelFr), 'FR') . } . OPTIONAL { ?compo rdfs:label ?compoLabelOther . FILTER ( !langMatches(lang(?compoLabelOther), 'FR') && !langMatches(lang(?compoLabelOther), 'EN') ) } . } }";
+      $.getJSON(g.paths.endpoint + '?default-graph-uri=internal&format=json&query=' + encodeURIComponent(componentQuery),
+        function (data) {
+          var componentFactory = new ComponentFactory();
+          self.currentComponents(componentFactory.build(data.results.bindings));
+        }
+      );
     };
 
     /**
