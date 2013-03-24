@@ -1,7 +1,7 @@
 # Datalift — DataCubeViz
 
 Version: 0.3
-Date: 2013-03-08  
+Date: 2013-24-08  
 Authors: [Thibaud Colas](https://github.com/ThibWeb), [Thibaut Marmin](https://github.com/marminthibaut)  
 Repository: [GitHub](https://github.com/Thibau/datalift-datacubeviz/)  
 Documentation: [GitHub Wiki](https://github.com/Thibau/datalift-sdmxdatacube/wiki)  
@@ -10,7 +10,7 @@ Documentation: [GitHub Wiki](https://github.com/Thibau/datalift-sdmxdatacube/wik
 
 ## tl;dr
 
-DataCubeViz is a [Datalift](http://datalift.org/) which helps visualizaing statistical datasets using the [DataCube](http://www.w3.org/TR/vocab-data-cube/) ontology.
+DataCubeViz is a [Datalift](http://datalift.org/) module which helps visualizing statistical datasets using the [DataCube](http://www.w3.org/TR/vocab-data-cube/) ontology.
 
 It was created to fulfill the needs of the Datalift project to work with statistical linked data by two students during a two weeks scholar project.
 
