@@ -9,7 +9,7 @@ define([
   'models/datacube/Observation',
   'models/factories/DatasetFactory',
   'models/factories/ObservationFactory',
-  'models/factories/ComponentFactory',
+  'models/factories/ComponentFactory'
 ], function ($, ko, g, TableOptions, State, Source, Dataset, Observation, DatasetFactory, ObservationFactory, ComponentFactory) {
   'use strict';
 

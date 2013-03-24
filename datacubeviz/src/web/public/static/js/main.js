@@ -1,6 +1,6 @@
 require.config({
-  baseUrl : 'http://localhost:1337/static/js',
-  // Prod/Dev : baseUrl : 'datacubeviz/static/js',
+  // Prod/Dev : baseUrl : 'http://localhost:1337/static/js',
+  baseUrl : 'datacubeviz/static/js',
   // Require.js allows us to configure shortcut alias
   paths : {
     jquery : 'libs/jquery-1.9.1.min',
@@ -42,6 +42,7 @@ require([
   'colreorder',
   'colvis'
 ], function (ko, g, ExplorerViewModel) {
+  'use strict';
   /*
     Here it is time for some explanation.
     RequireJS modules define their dependencies explicitly,
@@ -52,8 +53,7 @@ require([
     -- tl;dr;
     This is a "temporary" fix.
    */
-  //'use strict';
-  var parameters = inlineParameters;
+  var parameters = window.inlineParameters;
 
   // Bind a new instance of our view model to the page.
   ko.applyBindings(new ExplorerViewModel(parameters.project, parameters.language));
