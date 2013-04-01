@@ -3,7 +3,7 @@ define([
   'knockout',
   'config/global',
   'bootstrap',
-  'datatables',
+  'datatables'
 ], function ($, ko, g) {
   'use strict';
 
@@ -48,7 +48,7 @@ define([
     }
   };
 
-  // Custom binding to trigger modals.
+  // Custom binding to trigger Bootstrap modals.
   ko.bindingHandlers['modal'] = {
     init: function (element) {
       $(element).modal({show : false});
@@ -64,7 +64,7 @@ define([
     }
   };
 
-  // Custom binding to trigger tooltips.
+  // Custom binding to trigger Bootstrap tooltips.
   ko.bindingHandlers['tooltip'] = {
     init: function (element, valueAccessor) {
       var value = ko.utils.unwrapObservable(valueAccessor());
@@ -91,9 +91,7 @@ define([
    * And to only reload everything if we are switching to the right tab.
    */
   ko.bindingHandlers.dataTable = {
-      init: function (element, valueAccessor) {
-
-      },
+      init: function (element, valueAccessor) {},
       update: function (element, valueAccessor) {
         var binding = ko.utils.unwrapObservable(valueAccessor());
 
@@ -111,9 +109,7 @@ define([
      * longuer than a given length.
      */
     ko.bindingHandlers.truncate = {
-      init: function (element, valueAccessor) {
-
-      },
+      init: function (element, valueAccessor) {},
       update: function (element, valueAccessor) {
         var binding = ko.utils.unwrapObservable(valueAccessor());
 

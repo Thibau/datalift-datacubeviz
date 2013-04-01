@@ -7,10 +7,15 @@ define([
 ], function ($, ko, g, d3, nv) {
   'use strict';
 
-    ko.bindingHandlers.nvChart = {
-      init: function (element, valueAccessor) {
+    /**
+     * Here are stored some handlers for D3 / NVD3.
+     * Those handle bindings which need two things :
+     * - Data, in a format compatible with the handler
+     * - Parameters for the visualization.
+     */
 
-      },
+    ko.bindingHandlers.nvChart = {
+      init: function (element, valueAccessor) {},
       update: function (element, valueAccessor) {
         var binding = ko.utils.unwrapObservable(valueAccessor());
 
