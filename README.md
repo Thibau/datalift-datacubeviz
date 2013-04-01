@@ -34,7 +34,15 @@ This process can be automated by using one of the two build scripts : `reload_mo
 
 ## How is it built
 
-TODO
+
+### Points of interest
+
+* This module is built with strict mode enabled ("use strict").
+* SPARQL Queries hard-coded within the module are available in separate files.
+* Those SPARQL queries are quite huge to compensate for differences between DataCube datasets.
+* Both D3.js and NVD3 binding handlers are available (NVD3 is great but might not be as future-proof as vanilla D3).
+* This module shares a small common code base (via inheritance) with the StringToURI module.
+* Nearly all of the module's inner working is coded on the client side (ATM).
 
 ## What's the module's future
 
