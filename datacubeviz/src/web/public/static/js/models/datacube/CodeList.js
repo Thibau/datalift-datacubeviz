@@ -3,6 +3,10 @@ define([
 ], function (g) {
   'use strict';
 
+  /**
+   * TODO. TODO. TODO.
+   * A datacube.CodeList. Used in datasets' structure.
+   */
   var CodeList = function (identifier, label) {
     var self = this;
 

@@ -23,9 +23,9 @@ define([
   var ExplorerViewModel = function (project, language) {
     var self = this;
 
-    self.project        = ko.observable(project);
-    self.language       = ko.observable(language);
-    self.state          = new State();
+    self.project             = ko.observable(project);
+    self.language            = ko.observable(language);
+    self.state               = new State();
 
     self.datasets            = ko.observableArray([]);
     self.currentDataset      = ko.observable();

@@ -6,6 +6,7 @@ define([
   'use strict';
 
   /**
+   * TODO. TODO. TODO.
    * This class helps generating datacube.Components from the data
    * sent by the server. It basically manages a mapping between
    * the JSON message and our class.

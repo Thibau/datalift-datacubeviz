@@ -152,7 +152,7 @@
                       <!-- This should contain a way to select which components of the dataset to display. -->
                       <!-- TODO -->
                       <!-- Put otherwise, controls to filter the data. -->
-                      <p>TODO</p>
+                      <p class="label label-warning">TODO</p>
                     </form>
                   </div>
                 </div>
@@ -178,7 +178,7 @@
                       <!-- This should contain a way to select which components of the dataset to display. -->
                       <!-- TODO -->
                       <!-- Put otherwise, controls to filter the data. -->
-                      <p>TODO</p>
+                      <p class="label label-warning">TODO</p>
                     </form>
                   </div>
                 </div>
