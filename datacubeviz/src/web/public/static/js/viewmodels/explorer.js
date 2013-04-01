@@ -15,6 +15,22 @@ define([
   'use strict';
 
   /**
+   * What's next (TODO) :
+   * - "Pipe and filter" data from the observations to the views (table / charts).
+   * - Be able to visualize subsets of the triples in those views.
+   * - "Pipe and filter" components (structure) of the current dataset from the server (/ SPARQL Endpoint).
+   * - "Pipe and filter" those components to our model.
+   * - "Pipe and filter" our model to the controls to manage the views.
+   * - Add more views.
+   * - Add a management of history.
+   *
+   * Those are the two main items to make the module work, but it is also necessary to strenghten it.
+   * On the server side, it might be better to delegate some processing to the server component of the module.
+   * Either to parallelize development or to make responsibilities more manageable.
+   * For example to be able to embed visualization widgets inside other "pages" outside of the module.
+   */
+
+  /**
    * A view model which manages the exploration of DataCube datasets
    * contained inside DataCube sources.
    * @param {String} project  The URI of the current project (to retrieve datasets).
@@ -33,7 +49,7 @@ define([
     self.currentObservations = ko.observableArray([]);
 
 
-    self.stubData = [{key: "Cumulative Return",values: [{label: "One", value : 29.765957771107},{label: "Two", value : 0},{label: "Three", value : 32.807804682612},{label: "Four", value : 196.45946739256},{label: "Five", value : 0.19434030906893},{label: "Six", value : 98.079782601442},{label: "Seven", value : 13.925743130903},{label: "Eight", value : 5.1387322875705}]}];
+    self.stubData = [{key: "Cumulative Return", values: [{label: "One", value : 29.765957771107}, {label: "Two", value : 0}, {label: "Three", value : 32.807804682612}, {label: "Four", value : 196.45946739256}, {label: "Five", value : 0.19434030906893}, {label: "Six", value : 98.079782601442}, {label: "Seven", value : 13.925743130903}, {label: "Eight", value : 5.1387322875705}]}];
 
     /**
      * Initializes our explorer by retrieving the metadata for each dataset.
@@ -106,7 +122,13 @@ define([
      * @return {Object}           A Datatables configuration in a TableOptions object.
      */
     self.tableOptions = ko.computed(function () {
-      var columns = [ { sTitle: 'Col1' }, { sTitle: 'Col2' }, { sTitle: 'Col3' }, { sTitle: 'Col4' }];
+      var columns = [];
+      // TODO Use the components to define the columns.
+      if (self.currentObservations().length) {
+        for (var i = 0; i < 4; i++) {
+          columns.push({sTitle: 'Column' + i});
+        }
+      }
       return new TableOptions(self.language(), columns);
     });
 
