@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="${moduleUri}/static/css/datatables-bootstrap.css">
     <link rel="stylesheet" href="${moduleUri}/static/css/nv.d3.css">
 
-    <link rel="stylesheet" href="${moduleUri}/static/css/datacubeviz.css">
-    ## Prod/Dev : <link rel="stylesheet" href="http://localhost:1337/static/css/datacubeviz.css">
+    ## Prod/Dev : <link rel="stylesheet" href="${moduleUri}/static/css/datacubeviz.css">
+    <link rel="stylesheet" href="http://localhost:1337/static/css/datacubeviz.css">
 
     <!-- fav and touch icons -->
     <link rel="shortcut icon" href="${moduleUri}/static/img/favicon.ico">
@@ -149,7 +149,9 @@
                   <h3>#i18n('action.form.text')</h3>
                   <div class="well">
                     <form>
-
+                      <!-- This should contain a way to select which components of the dataset to display. -->
+                      <!-- TODO -->
+                      <!-- Put otherwise, controls to filter the data. -->
                     </form>
                   </div>
                 </div>
@@ -172,7 +174,9 @@
                   <h3>#i18n('action.form.text')</h3>
                   <div class="well">
                     <form>
-
+                      <!-- This should contain a way to select which components of the dataset to display. -->
+                      <!-- TODO -->
+                      <!-- Put otherwise, controls to filter the data. -->
                     </form>
                   </div>
                 </div>
@@ -183,7 +187,9 @@
                   <div>
                     <svg data-bind="nvChart: state.isSelected('graphs')"></svg>
                   </div>
-
+                  <!-- Here we put one or multiple charts which will be updated according to the filters selected up here -->
+                  <!-- TODO -->
+                  <!-- Put otherwise, some kind of Cross Filter. -->
                   <div>
                     <svg data-bind="pieChart: {data: stubData, visible: state.isSelected('graphs')}"></svg>
                   </div>
@@ -271,8 +277,8 @@
       };
     </script>
 
-    <script data-main="${moduleUri}/static/js/main" src="${moduleUri}/static/js/libs/require-2.1.4.min.js" type="text/javascript" language="javascript"></script>
-    ## Prod/Dev : <script data-main="http://localhost:1337/static/js/main.js" src="http://localhost:1337/static/js/libs/require-2.1.4.min.js" type="text/javascript" language="javascript"></script>
+    ## Prod/Dev : <script data-main="${moduleUri}/static/js/main" src="${moduleUri}/static/js/libs/require-2.1.4.min.js" type="text/javascript" language="javascript"></script>
+    <script data-main="http://localhost:1337/static/js/main.js" src="http://localhost:1337/static/js/libs/require-2.1.4.min.js" type="text/javascript" language="javascript"></script>
 
   </body>
 </html>
