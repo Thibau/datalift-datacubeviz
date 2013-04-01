@@ -152,6 +152,7 @@
                       <!-- This should contain a way to select which components of the dataset to display. -->
                       <!-- TODO -->
                       <!-- Put otherwise, controls to filter the data. -->
+                      <p>TODO</p>
                     </form>
                   </div>
                 </div>
@@ -177,6 +178,7 @@
                       <!-- This should contain a way to select which components of the dataset to display. -->
                       <!-- TODO -->
                       <!-- Put otherwise, controls to filter the data. -->
+                      <p>TODO</p>
                     </form>
                   </div>
                 </div>
@@ -184,12 +186,12 @@
 
               <div class="row-fluid">
                 <div class="span12">
-                  <div>
-                    <svg data-bind="nvChart: state.isSelected('graphs')"></svg>
-                  </div>
                   <!-- Here we put one or multiple charts which will be updated according to the filters selected up here -->
                   <!-- TODO -->
                   <!-- Put otherwise, some kind of Cross Filter. -->
+                  <div>
+                    <svg data-bind="nvChart: state.isSelected('graphs')"></svg>
+                  </div>
                   <div>
                     <svg data-bind="pieChart: {data: stubData, visible: state.isSelected('graphs')}"></svg>
                   </div>
