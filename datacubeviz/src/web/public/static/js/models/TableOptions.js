@@ -13,9 +13,9 @@ define([
    */
   var TableOptions = function (lang, columns) {
 
-    console.log(i18n.colvis);
     var options = {
       // This property is magic. http://www.datatables.net/usage/options#sDom
+      // Beware the poorly-designed library.
       sDom: 'RC<"clear">lf<"clearfix">rtip',
       // Options for the plugins.
       oColVis: {
