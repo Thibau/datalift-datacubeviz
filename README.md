@@ -1,7 +1,7 @@
 # Datalift — DataCubeViz
 
 Version: 0.3
-Date: 2013-24-08  
+Date: 2013-04-01  
 Authors: [Thibaud Colas](https://github.com/ThibWeb), [Thibaut Marmin](https://github.com/marminthibaut)  
 Repository: [GitHub](https://github.com/Thibau/datalift-datacubeviz/)  
 Documentation: [GitHub Wiki](https://github.com/Thibau/datalift-sdmxdatacube/wiki)  
@@ -34,6 +34,15 @@ This process can be automated by using one of the two build scripts : `reload_mo
 
 ## How is it built
 
+DataCubeViz is a Datalift module, thus uses the [Sesame](http://openrdf.org/) triplestore, the Jersey JAX-RS implementation and [GSON](https://code.google.com/p/google-gson/).
+
+This module is designed to feel snappy to use, the first request loads the whole interface and every subsequent call is full AJAJ.
+
+The frontend is built with [Twitter Bootstrap](http://twitter.github.com/bootstrap/), [KnockoutJS](http://knockoutjs.com/) and [RequireJS](http://requirejs.org/). We use RequireJS to help organize the JavaScript code, separating it into modules.
+
+The tabular view uses the popular [DataTables](http://datatables.net/) jQuery library, with some plugins to make it more Bootstrap-friendly and to add some functionalities.
+
+The chart view uses [D3](http://d3js.org/) and [NVD3](http://nvd3.org/), two JavaScript visualization libraries (the latter built on the former). which make it easy to render data on a web page via SVG and plain old CSS. NVD3 actually is based on D3 and "only" provides reusable charts.
 
 ### Points of interest
 
@@ -46,7 +55,27 @@ This process can be automated by using one of the two build scripts : `reload_mo
 
 ## What's the module's future
 
-This module will (hopefully) soon be integrated as part of Datalift's main modules repository and further be developed. Its interface will (hopefully) better answer the needs of its main users.
+This module will (hopefully) soon be integrated as part of Datalift's main modules repository and further be developed. It still needs some work to be able to work as intended.
+
+```
+
+/**
+ * What's next (TODO) :
+ * - "Pipe and filter" data from the observations to the views (table / charts).
+ * - Be able to visualize subsets of the triples in those views.
+ * - "Pipe and filter" components (structure) of the current dataset from the server (/ SPARQL Endpoint).
+ * - "Pipe and filter" those components to our model.
+ * - "Pipe and filter" our model to the controls to manage the views.
+ * - Add more views.
+ * - Add a management of history.
+ *
+ * Those are the two main items to make the module work, but it is also necessary to strenghten it.
+ * On the server side, it might be better to delegate some processing to the server component of the module.
+ * Either to parallelize development or to make responsibilities more manageable.
+ * For example to be able to embed visualization widgets inside other "pages" outside of the module.
+ */
+
+```
 
 ## External resources
 
