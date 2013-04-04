@@ -72,7 +72,7 @@ import com.google.gson.GsonBuilder;
 /**
  * The DatacubeViz module's main class which permit visualization of Datacube
  * sources.
- * 
+ *
  * @author T. Colas, T. Marmin
  * @version 260213
  */
@@ -114,7 +114,7 @@ public class DatacubeVizController extends ModuleController {
 	/**
 	 * Tells the project manager to add a new button to projects with at least
 	 * two sources.
-	 * 
+	 *
 	 * @param p
 	 *            Our current project.
 	 * @return The URI to our project's main page.
@@ -125,7 +125,8 @@ public class DatacubeVizController extends ModuleController {
 		// The project can be handled if it has at least one datacube
 		// source.
 		for (Source s : p.getSources()) {
-			if (model.isValidSource(s)) {
+			// TODO enlever pseudo condition here
+			if (true || model.isValidSource(s)) {
 				try {
 					projectPage = new UriDesc(this.getName() + "?project="
 							+ p.getUri(), HttpMethod.GET,
@@ -153,7 +154,7 @@ public class DatacubeVizController extends ModuleController {
 
 	/**
 	 * Index page handler of the DatacubeViz module.
-	 * 
+	 *
 	 * @param projectId
 	 *            the project using DatacubeViz
 	 * @return Our module's interface.
