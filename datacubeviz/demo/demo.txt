@@ -1,0 +1,3 @@
+## Démonstration de DataCubeViz
+
+Le dossier datacubeviz/demo contient quatre jeux de données pouvant être utilisés pour tester ce module. Ces jeux de données doivent être importés dans Datalift puis chargés en tant que sources RDF pour que le module devienne accessible (ne pas oublier de forcer le rafraîchissement de la page pour faire apparaître le bouton d'exécution du module).

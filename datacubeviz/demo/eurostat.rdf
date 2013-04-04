@@ -1,0 +1,2595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:sdmx-measure="http://purl.org/linked-data/sdmx/2009/measure#"
+	xmlns:utility="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/utility"
+	xmlns:qb="http://purl.org/linked-data/cube#" xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:sdmx="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:compact="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/compact"
+	xmlns:dcterms="http://purl.org/dc/terms/" xmlns:cross="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/cross"
+	xmlns:ical="http://www.w3.org/2002/12/cal/ical#" xmlns:generic="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/generic"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:query="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query"
+	xmlns:gaap="http://edgarwrap.ontologycentral.com/vocab/us-gaap#"
+	xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure"
+	xmlns="http://ontologycentral.com/2009/01/eurostat/ns#"
+	xml:base="http://estatwrap.ontologycentral.com/">
+
+	<rdf:Description rdf:about="">
+		<rdfs:comment>No guarantee of correctness! USE AT YOUR OWN RISK!</rdfs:comment>
+		<dcterms:publisher>Eurostat (http://epp.eurostat.ec.europa.eu/) via
+			Linked Eurostat (http://estatwrap.ontologycentral.com/)</dcterms:publisher>
+		<foaf:topic rdf:resource="#dsd" />
+		<rdfs:seeAlso
+			rdf:resource="http://estatwrap.ontologycentral.com/table_of_contents.rdf"></rdfs:seeAlso>
+		<foaf:maker
+			rdf:resource="http://cbasewrap.ontologycentral.com/company/ontologycentral#id"></foaf:maker>
+		<foaf:topic rdf:resource="#ds"></foaf:topic>
+		<dcterms:date>2013-02-27T15:57:14+0000</dcterms:date>
+	</rdf:Description>
+	<qb:DataStructureDefinition rdf:about="#dsd">
+		<foaf:page rdf:resource="" />
+		<qb:component>
+			<rdf:Description>
+				<qb:measure>
+					<rdfs:Property
+						rdf:about="http://purl.org/linked-data/sdmx/2009/measure#obsValue" />
+				</qb:measure>
+			</rdf:Description>
+		</qb:component>
+		<qb:component>
+			<rdf:Description>
+				<qb:dimension>
+					<rdfs:Property rdf:about="http://purl.org/dc/terms/date">
+						<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+					</rdfs:Property>
+				</qb:dimension>
+			</rdf:Description>
+		</qb:component>
+		<qb:component>
+			<rdf:Description>
+				<qb:dimension>
+					<rdfs:Property rdf:about="http://ontologycentral.com/2009/01/eurostat/ns#geo">
+						<rdfs:range
+							rdf:resource="http://rdfdata.eionet.europa.eu/ramon/ontology/NUTSRegion" />
+					</rdfs:Property>
+				</qb:dimension>
+			</rdf:Description>
+		</qb:component>
+		<qb:component>
+			<rdf:Description>
+				<qb:dimension>
+					<rdfs:Property
+						rdf:about="http://ontologycentral.com/2009/01/eurostat/ns#indic_de">
+						<qb:codeList rdf:resource="#cl_indic_de" />
+					</rdfs:Property>
+				</qb:dimension>
+			</rdf:Description>
+		</qb:component>
+		<qb:component>
+			<rdf:Description />
+		</qb:component>
+		<qb:component>
+			<rdf:Description>
+				<qb:dimension>
+					<rdfs:Property
+						rdf:about="http://ontologycentral.com/2009/01/eurostat/ns#timeformat">
+						<qb:codeList rdf:resource="#cl_time_format" />
+					</rdfs:Property>
+				</qb:dimension>
+			</rdf:Description>
+		</qb:component>
+		<qb:component>
+			<rdf:Description>
+				<qb:dimension>
+					<rdfs:Property
+						rdf:about="http://ontologycentral.com/2009/01/eurostat/ns#freq">
+						<qb:codeList rdf:resource="#cl_freq" />
+					</rdfs:Property>
+				</qb:dimension>
+			</rdf:Description>
+		</qb:component>
+		<qb:component>
+			<rdf:Description>
+				<qb:dimension>
+					<rdfs:Property
+						rdf:about="http://ontologycentral.com/2009/01/eurostat/ns#obs_status">
+						<qb:codeList rdf:resource="#cl_obs_status" />
+					</rdfs:Property>
+				</qb:dimension>
+			</rdf:Description>
+		</qb:component>
+	</qb:DataStructureDefinition>
+	<rdf:Description rdf:about="#header">
+		<dcterms:identifier>tps00001_DSD</dcterms:identifier>
+
+
+
+		<dcterms:date>2013-02-27T02:39:57</dcterms:date>
+
+
+	</rdf:Description>
+
+
+	<skos:ConceptScheme rdf:about="#cl_indic_de">
+		<skos:notation>cl_indic_de</skos:notation>
+		<rdfs:label xml:lang="en">Demographic indicator</rdfs:label>
+		<rdfs:label xml:lang="de">Demographische Indikator</rdfs:label>
+		<rdfs:label xml:lang="fr">Indicateur démographique</rdfs:label>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/indic_de#JAN">
+				<rdfs:label xml:lang="en">Population on 1 January - total </rdfs:label>
+				<rdfs:label xml:lang="de">Bevölkerung am 1. Januar - insgesamt </rdfs:label>
+				<rdfs:label xml:lang="fr">Population au 1er janvier - totale</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+	</skos:ConceptScheme>
+
+	<skos:ConceptScheme rdf:about="#cl_time_format">
+		<skos:notation>cl_time_format</skos:notation>
+		<rdfs:label xml:lang="en">Time Format</rdfs:label>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/time_format#P1Y">
+				<rdfs:label xml:lang="en">Annual</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/time_format#P6M">
+				<rdfs:label xml:lang="en">Semi-annual</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/time_format#P3M">
+				<rdfs:label xml:lang="en">Quarterly</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/time_format#P1M">
+				<rdfs:label xml:lang="en">Monthly</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/time_format#P7D">
+				<rdfs:label xml:lang="en">Weekly</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/time_format#P1D">
+				<rdfs:label xml:lang="en">Daily</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/time_format#PT1M">
+				<rdfs:label xml:lang="en">Minutely</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+	</skos:ConceptScheme>
+	<skos:ConceptScheme rdf:about="#cl_freq">
+		<skos:notation>cl_freq</skos:notation>
+		<rdfs:label xml:lang="en">Frequency code list</rdfs:label>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/freq#A">
+				<rdfs:label xml:lang="en">Annual</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/freq#S">
+				<rdfs:label xml:lang="en">Half-yearly, semester</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/freq#Q">
+				<rdfs:label xml:lang="en">Quarterly</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/freq#M">
+				<rdfs:label xml:lang="en">Monthly</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/freq#W">
+				<rdfs:label xml:lang="en">Weekly</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/freq#B">
+				<rdfs:label xml:lang="en">Business week</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/freq#D">
+				<rdfs:label xml:lang="en">Daily</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/freq#H">
+				<rdfs:label xml:lang="en">Hourly</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/freq#N">
+				<rdfs:label xml:lang="en">Minutely</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+	</skos:ConceptScheme>
+	<skos:ConceptScheme rdf:about="#cl_obs_status">
+		<skos:notation>cl_obs_status</skos:notation>
+		<rdfs:label xml:lang="en">Observation status code list</rdfs:label>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#d">
+				<rdfs:label xml:lang="en">definition differs, see metadata</rdfs:label>
+				<rdfs:label xml:lang="de">abweichende Definition, siehe
+					Metadaten</rdfs:label>
+				<rdfs:label xml:lang="fr">définition différente, voir
+					métadonnées</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#b">
+				<rdfs:label xml:lang="en">break in time series</rdfs:label>
+				<rdfs:label xml:lang="de">Zeitreihenbruch</rdfs:label>
+				<rdfs:label xml:lang="fr">rupture de série</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#c">
+				<rdfs:label xml:lang="en">confidential</rdfs:label>
+				<rdfs:label xml:lang="de">vertraulich</rdfs:label>
+				<rdfs:label xml:lang="fr">confidentiel</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#e">
+				<rdfs:label xml:lang="en">estimated</rdfs:label>
+				<rdfs:label xml:lang="de">geschätzt</rdfs:label>
+				<rdfs:label xml:lang="fr">estimé</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#f">
+				<rdfs:label xml:lang="en">forecast</rdfs:label>
+				<rdfs:label xml:lang="de">Prognose</rdfs:label>
+				<rdfs:label xml:lang="fr">prévision</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#i">
+				<rdfs:label xml:lang="en">see metadata</rdfs:label>
+				<rdfs:label xml:lang="de">siehe Metadaten</rdfs:label>
+				<rdfs:label xml:lang="fr">voir métadonnées</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#n">
+				<rdfs:label xml:lang="en">not significant</rdfs:label>
+				<rdfs:label xml:lang="de">unbedeutend</rdfs:label>
+				<rdfs:label xml:lang="fr">non significatif</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#p">
+				<rdfs:label xml:lang="en">provisional</rdfs:label>
+				<rdfs:label xml:lang="de">vorläufig</rdfs:label>
+				<rdfs:label xml:lang="fr">provisoire</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#r">
+				<rdfs:label xml:lang="en">revised</rdfs:label>
+				<rdfs:label xml:lang="de">revidiert</rdfs:label>
+				<rdfs:label xml:lang="fr">révisé</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#s">
+				<rdfs:label xml:lang="en">Eurostat estimate</rdfs:label>
+				<rdfs:label xml:lang="de">Eurostat Schätzung</rdfs:label>
+				<rdfs:label xml:lang="fr">estimation Eurostat</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#u">
+				<rdfs:label xml:lang="en">low reliability</rdfs:label>
+				<rdfs:label xml:lang="de">geringe Zuverlässigkeit</rdfs:label>
+				<rdfs:label xml:lang="fr">peu fiable</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+		<skos:hasTopConcept>
+			<skos:Concept rdf:about="../dic/obs_status#z">
+				<rdfs:label xml:lang="en">not applicable</rdfs:label>
+				<rdfs:label xml:lang="de">nicht zutreffend</rdfs:label>
+				<rdfs:label xml:lang="fr">non applicable</rdfs:label>
+			</skos:Concept>
+		</skos:hasTopConcept>
+	</skos:ConceptScheme>
+
+	<qb:DataSet rdf:about="/id/tps00001#ds">
+		<rdfs:label>Population at 1 January</rdfs:label>
+		<rdfs:comment>Source: Eurostat (http://epp.eurostat.ec.europa.eu/) via
+			Linked Eurostat (http://estatwrap.ontologycentral.com/).</rdfs:comment>
+		<rdfs:seeAlso
+			rdf:resource="http://epp.eurostat.ec.europa.eu/portal/page/portal/about_eurostat/corporate/copyright_licence_policy"></rdfs:seeAlso>
+		<rdfs:seeAlso rdf:resource="http://ontologycentral.com/2009/01/eurostat/"></rdfs:seeAlso>
+		<foaf:page rdf:resource=""></foaf:page>
+		<qb:structure rdf:resource="../dsd/tps00001#dsd"></qb:structure>
+	</qb:DataSet>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#AT"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>8201359</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#AT"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>8254298</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#AT"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>8282984</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#AT"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>8318592</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#AT"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>8355260</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#AT"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>8375290</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#AT"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>8404252</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#AT"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">8443018</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BE"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>10445852</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BE"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>10511382</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BE"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>10584534</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BE"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>10666866</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BE"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>10753080</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BE"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>10839905</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BE"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">11000638</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BE"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">11094850</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BG"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>7761049</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BG"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>7718750</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BG"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>7679290</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BG"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>7640238</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BG"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>7606551</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BG"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>7563710</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BG"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">7369431</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#BG"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>7327224</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CH"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>7415102</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CH"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>7459128</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CH"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>7508739</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CH"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>7593494</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CH"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>7701856</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CH"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>7785806</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CH"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">7870134</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CH"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">7954662</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CY"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>749175</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CY"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>766414</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CY"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>778684</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CY"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>789269</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CY"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>796875</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CY"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">819140</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CY"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>839751</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CY"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>862011</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CZ"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>10220577</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CZ"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>10251079</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CZ"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>10287189</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CZ"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>10381130</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CZ"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>10467542</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CZ"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>10506813</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CZ"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">10486731</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#CZ"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">10505445</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DE"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>82500849</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DE"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>82437995</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DE"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>82314906</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DE"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>82217837</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DE"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>82002356</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DE"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>81802257</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DE"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>81751602</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DE"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">81843743</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DK"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>5411405</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DK"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>5427459</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DK"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>5447084</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DK"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>5475791</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DK"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>5511451</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DK"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>5534738</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DK"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>5560628</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#DK"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>5580516</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA16"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>321682640</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA16"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>323469032</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA16"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>325218410</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA16"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>327146240</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA16"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">328632545</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA16"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">329550232</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA16"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">330624669</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA16"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">331536800</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA17"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>323030150</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA17"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>324813716</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA17"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>326560819</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA17"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>328487175</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA17"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">329972960</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA17"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">330890359</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA17"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">331964863</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EA17"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">332876462</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EE"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>1347510</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EE"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>1344684</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EE"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>1342409</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EE"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>1340935</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EE"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>1340415</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EE"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>1340127</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EE"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>1340194</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EE"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">1339662</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EL"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>11082751</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EL"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>11125179</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EL"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>11171740</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EL"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>11213785</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EL"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>11260402</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EL"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>11305118</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EL"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>11309885</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EL"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">11290067</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ES"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>43038035</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ES"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>43758250</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ES"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>44474631</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ES"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>45283259</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ES"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>45828172</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ES"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>45989016</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ES"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>46152926</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ES"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">46196276</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EU27"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>491134938</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EU27"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>493210397</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EU27"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>495291925</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EU27"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>497686132</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EU27"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">499686575</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EU27"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">501084516</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EU27"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">502369211</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#EU27"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">503663601</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FI"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>5236611</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FI"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>5255580</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FI"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>5276955</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FI"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>5300484</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FI"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>5326314</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FI"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>5351427</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FI"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>5375276</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FI"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>5401267</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FR"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>62772870</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FR"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>63229635</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FR"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>63645065</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FR"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>64007193</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FR"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">64350226</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FR"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">64658856</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FR"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">64994907</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#FR"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">65327724</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HR"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>4443901</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HR"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>4442884</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HR"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>4441238</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HR"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>4436401</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HR"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>4435056</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HR"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>4425747</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HR"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>4412137</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HR"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">4398150</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HU"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>10097549</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HU"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>10076581</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HU"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>10066158</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HU"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>10045401</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HU"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>10030975</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HU"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>10014324</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HU"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>9985722</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#HU"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">9957731</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IE"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>4111672</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IE"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>4208156</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IE"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>4312526</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IE"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>4401335</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IE"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>4450030</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IE"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>4467854</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IE"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">4570727</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IE"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">4582769</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IS"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>293577</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IS"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>299891</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IS"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>307672</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IS"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>315459</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IS"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>319368</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IS"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>317630</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IS"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>318452</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IS"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>319575</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IT"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>58462375</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IT"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>58751711</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IT"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>59131287</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IT"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>59619290</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IT"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>60045068</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IT"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>60340328</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IT"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>60626442</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#IT"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">60820696</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LI"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>34600</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LI"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>34905</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LI"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>35168</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LI"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>35356</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LI"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>35589</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LI"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>35894</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LI"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>36149</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LI"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">36475</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LT"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>3425324</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LT"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>3403284</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LT"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>3384879</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LT"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>3366357</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LT"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>3349872</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LT"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>3329039</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LT"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">3052588</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LT"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>3007758</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LU"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>461230</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LU"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>469086</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LU"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>476187</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LU"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>483799</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LU"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>493500</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LU"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>502066</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LU"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>511840</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LU"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">524853</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LV"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>2306434</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LV"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>2294590</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LV"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>2281305</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LV"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>2270894</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LV"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>2261294</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LV"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>2248374</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LV"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">2074605</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#LV"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">2041763</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ME"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>622978</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ME"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>623576</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ME"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>624896</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ME"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>627508</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ME"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>630142</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ME"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">616411</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ME"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>619872</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#ME"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>621240</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MK"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>2035196</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MK"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>2038514</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MK"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>2041941</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MK"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>2045177</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MK"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>2048619</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MK"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>2052722</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MK"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>2057284</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MK"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">2059794</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MT"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>402668</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MT"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>405006</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MT"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>407810</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MT"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>410290</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MT"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>413609</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MT"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>414372</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MT"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">415832</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#MT"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">417520</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NL"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>16305526</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NL"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>16334210</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NL"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>16357992</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NL"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>16405399</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NL"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>16485787</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NL"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>16574989</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NL"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>16655799</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NL"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>16730348</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NO"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>4606363</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NO"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>4640219</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NO"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>4681134</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NO"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>4737171</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NO"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>4799252</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NO"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>4858199</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NO"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>4920305</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#NO"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>4985870</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PL"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>38173835</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PL"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>38157055</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PL"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>38125479</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PL"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>38115641</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PL"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>38135876</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PL"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>38167329</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PL"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">38529866</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PL"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">38538447</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PT"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>10529255</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PT"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>10569592</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PT"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>10599095</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PT"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>10617575</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PT"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>10627250</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PT"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>10637713</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PT"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#bp">10572157</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#PT"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">10541840</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#RO"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>21658528</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#RO"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>21610213</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#RO"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>21565119</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#RO"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>21528627</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#RO"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>21498616</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#RO"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>21462186</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#RO"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">21413815</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#RO"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">21355849</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SE"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>9011392</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SE"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>9047752</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SE"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>9113257</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SE"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>9182927</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SE"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>9256347</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SE"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>9340682</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SE"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>9415570</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SE"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>9482855</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SI"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>1997590</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SI"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>2003358</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SI"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>2010377</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SI"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">2010269</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SI"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>2032362</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SI"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>2046976</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SI"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>2050189</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SI"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>2055496</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SK"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>5384822</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SK"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>5389180</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SK"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>5393637</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SK"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>5400998</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SK"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>5412254</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SK"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>5424925</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SK"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">5392446</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#SK"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>5404322</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#TR"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>71610009</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#TR"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>72519974</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#TR"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#b">69689256</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#TR"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>70586256</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#TR"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>71517100</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#TR"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>72561312</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#TR"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue>73722988</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#TR"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue>74724269</sdmx-measure:obsValue>
+	</qb:Observation>
+	<rdf:Description rdf:about="">
+		<rdfs:comment>ATTENTION: file is truncated due to processing time
+			restrictions.</rdfs:comment>
+	</rdf:Description>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#UK"></geo>
+		<dcterms:date>2005</dcterms:date>
+		<sdmx-measure:obsValue>60038695</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#UK"></geo>
+		<dcterms:date>2006</dcterms:date>
+		<sdmx-measure:obsValue>60409918</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#UK"></geo>
+		<dcterms:date>2007</dcterms:date>
+		<sdmx-measure:obsValue>60781346</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#UK"></geo>
+		<dcterms:date>2008</dcterms:date>
+		<sdmx-measure:obsValue>61191951</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#UK"></geo>
+		<dcterms:date>2009</dcterms:date>
+		<sdmx-measure:obsValue>61595091</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#UK"></geo>
+		<dcterms:date>2010</dcterms:date>
+		<sdmx-measure:obsValue>62026962</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#UK"></geo>
+		<dcterms:date>2011</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">62515392</sdmx-measure:obsValue>
+	</qb:Observation>
+	<qb:Observation>
+		<qb:dataSet rdf:resource="/id/tps00001#ds"></qb:dataSet>
+		<indic_de rdf:resource="/dic/indic_de#JAN"></indic_de>
+		<geo rdf:resource="/dic/geo#UK"></geo>
+		<dcterms:date>2012</dcterms:date>
+		<sdmx-measure:obsValue rdf:datatype="/dic/note#p">62989551</sdmx-measure:obsValue>
+	</qb:Observation>
+</rdf:RDF>
