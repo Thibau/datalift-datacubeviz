@@ -6,6 +6,8 @@ Authors: [Thibaud Colas](https://github.com/ThibWeb), [Thibaut Marmin](https://g
 Repository: [GitHub](https://github.com/Thibau/datalift-datacubeviz/)  
 Documentation: [GitHub Wiki](https://github.com/Thibau/datalift-sdmxdatacube/wiki)  
 
+[![Code Climate](https://codeclimate.com/github/Thibau/datalift-datacubeviz.png)](https://codeclimate.com/github/Thibau/datalift-datacubeviz)
+
 ---------------------------------------------------------------------
 
 ## tl;dr
