@@ -2,7 +2,7 @@
 
 Version: 0.4
 Date: 2013-04-01  
-Authors: [Thibaud Colas](https://github.com/ThibWeb), [Thibaut Marmin](https://github.com/marminthibaut)  
+Authors: [Thibaud Colas](https://github.com/thibaudcolas), [Thibaut Marmin](https://github.com/marminthibaut)  
 Repository: [GitHub](https://github.com/Thibau/datalift-datacubeviz/)  
 Documentation: [GitHub Wiki](https://github.com/Thibau/datalift-sdmxdatacube/wiki)  
 
